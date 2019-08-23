@@ -1,0 +1,96 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>convertdate</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="bg_terminate.html">&lt;&lt; bg_terminate</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="corr_matrix.html">corr_matrix &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">bytecode_iot_module</a> &gt;&gt; <a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a> &gt; convertdate</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">convertdate</h1>
+    <p class="refpurpose">Convert date format</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">datestr</span><span class="default"> = </span><span class="functionid">convertdate</span><span class="default">(</span><span class="default">x</span><span class="default">)</span>
+<span class="default">datestr</span><span class="default"> = </span><span class="functionid">convertdate</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">tgt</span><span class="default">)</span>
+<span class="default">datestr</span><span class="default"> = </span><span class="functionid">convertdate</span><span class="default">(</span><span class="default">x</span><span class="default">,</span><span class="default">tgt</span><span class="default">,</span><span class="default">src</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">x :</span>
+            <dd><p class="para">String vector/scalar. Input date</p></dd></dt>
+        <dt><span class="term">tgt :</span>
+            <dd><p class="para">String. Target date format. Default is &#0034;yyyy.MM.dd.HH.mm.ss&#0034;</p></dd></dt>
+        <dt><span class="term">src :</span>
+            <dd><p class="para">String. Input date format. Default assumed to be &#0034;EEE MMM dd HH:mm:ss z yyyy&#0034;</p></dd></dt>
+        <dt><span class="term">datestr :</span>
+            <dd><p class="para">String vector/scalar. Returned date in new format</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This function converts the date&#0039;s format to another format</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Example 1</span>
+<span class="scilabid">datestr1</span> <span class="scilaboperator">=</span> <span class="scilabid">convertdate</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Mon Aug 05 14:38:00 MYT 2019</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabcomment">// Example 2</span>
+<span class="scilabid">newformat</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">yyyy/MM/dd HH:mm:ss</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">datestr2</span> <span class="scilaboperator">=</span> <span class="scilabid">convertdate</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">Mon Aug 05 14:38:00 MYT 2019</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">newformat</span><span class="scilabopenclose">)</span>
+<span class="scilabcomment">// Example 3</span>
+<span class="scilabid">oldformat</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">dd-MMM-yyyy HH:mm</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">newformat</span> <span class="scilaboperator">=</span> <span class="scilabstring">&#0034;</span><span class="scilabstring">HH:mm:ss MM/dd/yy</span><span class="scilabstring">&#0034;</span>
+<span class="scilabid">datestr3</span> <span class="scilaboperator">=</span> <span class="scilabid">convertdate</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">05-Aug-2019 14:38</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabid">newformat</span><span class="scilabdefault">,</span><span class="scilabid">oldformat</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T., Bytecode</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="bg_terminate.html">&lt;&lt; bg_terminate</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="corr_matrix.html">corr_matrix &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

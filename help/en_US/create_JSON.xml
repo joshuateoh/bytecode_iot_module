@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from create_JSON.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="create_JSON" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>create_JSON</refname>
+    <refpurpose>Create a JSON-formatted data</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   jsonbody = create_JSON(key1,val1)
+   jsonbody = create_JSON(key1,val1,key2,val2,...)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>key1, key2, ..., keyn :</term>
+            <listitem><para> String. Device key/variable</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>val1, val2, ..., valn :</term>
+            <listitem><para> String or constant. The key's value</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>jsonbody :</term>
+            <listitem><para> A data string in JSON Format</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Creates a JSON-formatted data. The input needs to be in key-value pairs.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+jsonbody = create_JSON("temp",25.5,"humidity","83%")
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

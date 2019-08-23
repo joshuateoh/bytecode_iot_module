@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from x_string_plot.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="x_string_plot" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>x_string_plot</refname>
+    <refpurpose>Plot a graph with x data in string format</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   x_string_plot(x,y,n)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> x data in string</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>y :</term>
+            <listitem><para> y daya</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>n :</term>
+            <listitem><para> number of ticks in x axis</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This is to plot the graph with th x data in string format. Use 3rd argument to make the x axis looks tidy
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x = ['a','b','c','d','e','f','g','h','i','j'];
+y = [0.84,0.91,0.14,-0.76,-0.96,-0.28,0.66,0.99,0.41,-0.54];
+x_string_plot(x,y,5)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="x_string_datatips">x_string_datatips</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

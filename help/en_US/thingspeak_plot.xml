@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingspeak_plot.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingspeak_plot" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingspeak_plot</refname>
+    <refpurpose>Plot a ThingSpeak field</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   thingspeak_plot(xtime,ydata)
+   thingspeak_plot(xtime,ydata,linespec)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>xtime :</term>
+            <listitem><para> The field's time parameter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ydata :</term>
+            <listitem><para> The field's values</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>linespec :</term>
+            <listitem><para> Options to draw the graph</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Plots a graph of a ThingSpeak field using the output from thingspeak_fieldvalues
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+fv = thingspeak_fieldvalues(channelID,'private','','readkey',1,'results',100)
+thingspeak_plot(fv.time,fv.values,'g-*')
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingspeak_channelinfo">thingspeak_channelinfo</link></member>
+   <member><link linkend="thingspeak_fieldvalues">thingspeak_fieldvalues</link></member>
+   <member><link linkend="thingspeak_newentry">thingspeak_newentry</link></member>
+   <member><link linkend="thingspeak_update">thingspeak_update</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

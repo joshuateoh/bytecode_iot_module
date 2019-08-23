@@ -1,0 +1,6 @@
+changelog of the bytecode_iot_module
+
+Version 1.0 (23-Aug-2019)
+* Published to Github. 
+
+

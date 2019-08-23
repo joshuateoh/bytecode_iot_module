@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from ubidots_post.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="ubidots_post" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>ubidots_post</refname>
+    <refpurpose>Post a data to Ubidots sensor's variable</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   out = ubidots_post(tokenID,sensorID,val)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>tokenID :</term>
+            <listitem><para> Token ID</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>sensorID :</term>
+            <listitem><para> Sensor ID</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>val :</term>
+            <listitem><para> Value to sent to the sensor source</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>out :</term>
+            <listitem><para> 1 indicate data posted successfully, otherwise 0 will be returned</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Post a data to a sensor source of
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="ubidots_get">ubidots_get</link></member>
+   <member><link linkend="ubidots_count">ubidots_count</link></member>
+   <member><link linkend="ubidots_getdata">ubidots_getdata</link></member>
+   <member><link linkend="ubidots_listsource">ubidots_listsource</link></member>
+   <member><link linkend="ubidots_listvar">ubidots_listvar</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

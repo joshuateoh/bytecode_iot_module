@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from favor_struct2json.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="favor_struct2json" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>favor_struct2json</refname>
+    <refpurpose>Converts a data structure to JSON format</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   data = favor_struct2json(st)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>data :</term>
+            <listitem><para> The data in JSON format</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>st :</term>
+            <listitem><para> The data structure</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Converts the data structure into JSON format. The data structure is obtained from the function favor_CreateData.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="favor_createData">favor_createData</link></member>
+   <member><link linkend="favor_createSensors">favor_createSensors</link></member>
+   <member><link linkend="favor_filterSensor">favor_filterSensor</link></member>
+   <member><link linkend="favor_getAllApplications">favor_getAllApplications</link></member>
+   <member><link linkend="favor_getAllData">favor_getAllData</link></member>
+   <member><link linkend="favor_getAllDevices">favor_getAllDevices</link></member>
+   <member><link linkend="favor_getAllGroups">favor_getAllGroups</link></member>
+   <member><link linkend="favor_getAllProjects">favor_getAllProjects</link></member>
+   <member><link linkend="favor_getApplication">favor_getApplication</link></member>
+   <member><link linkend="favor_getDevice">favor_getDevice</link></member>
+   <member><link linkend="favor_getDeviceData">favor_getDeviceData</link></member>
+   <member><link linkend="favor_getGroup">favor_getGroup</link></member>
+   <member><link linkend="favor_getProject">favor_getProject</link></member>
+   <member><link linkend="favor_sendData">favor_sendData</link></member>
+   <member><link linkend="favor_struct2json">favor_struct2json</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

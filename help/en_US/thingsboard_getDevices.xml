@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingsboard_getDevices.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingsboard_getDevices" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingsboard_getDevices</refname>
+    <refpurpose>Retrieve a user's list of devices</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [devices, code] = thingsboard_getDevices(url,token)
+   [devices, code] = thingsboard_getDevices(url,token,namefilter)
+   [devices, code] = thingsboard_getDevices(url,token,namefilter,ndev)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> The ThingsBoard platform url</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>token :</term>
+            <listitem><para> Thingsboard token</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>namefilter :</term>
+            <listitem><para> A string to filter devices based on the name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ndev :</term>
+            <listitem><para> Maximum number of devices to be retrieved</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>devices :</term>
+            <listitem><para> A N by 2 string array containing the device name and ID</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>code :</term>
+            <listitem><para> Status code</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Retrieves a user's devices' name and ID. Devices with specific names can be filtered using namefilter.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Retrieve all the user's devices
+token = thingsboard_getToken(url,user,pw)
+[devices,code] = thingsboard_getDevices(url,token)
+// Retrieve the user's devices that contains "test" in their name
+[devices,code] = thingsboard_getDevices(url,token,"test")
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingsboard_getDeviceToken">thingsboard_getDeviceToken</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

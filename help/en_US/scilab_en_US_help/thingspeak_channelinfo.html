@@ -1,0 +1,91 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>thingspeak_channelinfo</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_refreshToken.html">&lt;&lt; thingsboard_refreshToken</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingspeak_fieldvalues.html">thingspeak_fieldvalues &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">bytecode_iot_module</a> &gt;&gt; <a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a> &gt; thingspeak_channelinfo</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">thingspeak_channelinfo</h1>
+    <p class="refpurpose">Get Thingspeak Channel Information</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">channel_info</span><span class="default">= </span><span class="functionid">thingspeak_channelinfo</span><span class="default">(</span><span class="default">channelID</span><span class="default">,</span><span class="default">privacy</span><span class="default">,</span><span class="default">apiWriteKey</span><span class="default">,</span><span class="default">apiReadKey</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">channelID :</span>
+            <dd><p class="para">channel ID in ThingSpeak</p></dd></dt>
+        <dt><span class="term">privacy :</span>
+            <dd><p class="para">Specify whether the channel is &#0039;public&#0039; or &#0039;private&#0039;</p></dd></dt>
+        <dt><span class="term">apiWriteKey :</span>
+            <dd><p class="para">Write API Key of the channel</p></dd></dt>
+        <dt><span class="term">apiReadKey :</span>
+            <dd><p class="para">Read API Key of the channel.</p></dd></dt>
+        <dt><span class="term">channel_info :</span>
+            <dd><p class="para">Channel information</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">This is to display the information of the channel in the thingspeak cloud.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">channel_info</span><span class="scilaboperator">=</span> <span class="scilabid">thingspeak_channelinfo</span><span class="scilabopenclose">(</span><span class="scilabid">channelID</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">private</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">writekey</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">readkey</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="thingspeak_fieldvalues.html" class="link">thingspeak_fieldvalues</a> &#8212; Find (GET) values from a field in a ThingSpeak channel</li>
+   <li class="member"><a href="thingspeak_newentry.html" class="link">thingspeak_newentry</a> &#8212; Create a structure to store the data that is to be sent to the ThingSpeak channel.</li>
+   <li class="member"><a href="thingspeak_plot.html" class="link">thingspeak_plot</a> &#8212; Plot a ThingSpeak field</li>
+   <li class="member"><a href="thingspeak_update.html" class="link">thingspeak_update</a> &#8212; Update a Thingspeak Channel</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T., Bytecode</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_refreshToken.html">&lt;&lt; thingsboard_refreshToken</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingspeak_fieldvalues.html">thingspeak_fieldvalues &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

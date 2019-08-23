@@ -1,0 +1,92 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>thingsboard_getDeviceToken</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_getData.html">&lt;&lt; thingsboard_getData</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingsboard_getDevices.html">thingsboard_getDevices &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">bytecode_iot_module</a> &gt;&gt; <a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a> &gt; thingsboard_getDeviceToken</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">thingsboard_getDeviceToken</h1>
+    <p class="refpurpose">Retrieve a device&#0039;s token</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">devicetoken</span><span class="default">,</span><span class="default">code</span><span class="default">] = </span><span class="functionid">thingsboard_getDeviceToken</span><span class="default">(</span><span class="default">url</span><span class="default">,</span><span class="default">token</span><span class="default">,</span><span class="default">deviceID</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">url :</span>
+            <dd><p class="para">The ThingsBoard platform url</p></dd></dt>
+        <dt><span class="term">token :</span>
+            <dd><p class="para">Thingsboard token</p></dd></dt>
+        <dt><span class="term">deviceID :</span>
+            <dd><p class="para">Device id</p></dd></dt>
+        <dt><span class="term">devicetoken :</span>
+            <dd><p class="para">The device&#0039;s token</p></dd></dt>
+        <dt><span class="term">code :</span>
+            <dd><p class="para">Status code</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Retrieves a device&#0039;s token. This token is needed in order to push data to the device. Note that this token is different from the thingsboard_getToken&#0039;s token.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// If you want to push data to a device with id ABC123</span>
+<span class="scilabid">data</span> <span class="scilaboperator">=</span> <span class="scilabid">create_JSON</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0034;</span><span class="scilabstring">temp</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">24</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">humidity</span><span class="scilabstring">&#0034;</span><span class="scilabdefault">,</span><span class="scilabnumber">55</span><span class="scilabopenclose">)</span>
+<span class="scilabid">token</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getToken</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">user</span><span class="scilabdefault">,</span><span class="scilabid">pw</span><span class="scilabopenclose">)</span>
+<span class="scilabopenclose">[</span><span class="scilabid">devicetoken</span><span class="scilabdefault">,</span><span class="scilabid">code</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getDeviceToken</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">token</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ABC123</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span>
+<span class="scilabid">n</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_postData</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">devicetoken</span><span class="scilabdefault">,</span><span class="scilabid">data</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="thingsboard_postData.html" class="link">thingsboard_postData</a> &#8212; Push data to ThingsBoard</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T., Bytecode</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_getData.html">&lt;&lt; thingsboard_getData</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingsboard_getDevices.html">thingsboard_getDevices &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

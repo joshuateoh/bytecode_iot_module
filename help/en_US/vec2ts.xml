@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from vec2ts.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="vec2ts" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>vec2ts</refname>
+    <refpurpose>Convert time vector to timestamp in milliseconds, with GMT offset</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   timestamp = vec2ts(timevec,gmt)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>timevec :</term>
+            <listitem><para> Time (Date) vector.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>gmt :</term>
+            <listitem><para> GMT offset to get the local time</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>timestamp :</term>
+            <listitem><para> Time stamp in unix time milliseconds</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Convert time vector to timestamp in milliseconds, with GMT offset
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="ts2sci">ts2sci</link></member>
+   <member><link linkend="ts2str">ts2str</link></member>
+   <member><link linkend="ts2vec">ts2vec</link></member>
+   <member><link linkend="sci2ts">sci2ts</link></member>
+   <member><link linkend="str2ts">str2ts</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

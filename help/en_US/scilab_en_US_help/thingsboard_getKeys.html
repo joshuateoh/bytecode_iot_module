@@ -1,0 +1,88 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>thingsboard_getKeys</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_getDevices.html">&lt;&lt; thingsboard_getDevices</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingsboard_getToken.html">thingsboard_getToken &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">bytecode_iot_module</a> &gt;&gt; <a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a> &gt; thingsboard_getKeys</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">thingsboard_getKeys</h1>
+    <p class="refpurpose">Retrieves the keys (variables) from a device in ThingsBoard.</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">keys</span><span class="default"> = </span><span class="functionid">thingsboard_getKeys</span><span class="default">(</span><span class="default">url</span><span class="default">,</span><span class="default">token</span><span class="default">,</span><span class="default">deviceID</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">url :</span>
+            <dd><p class="para">The ThingsBoard platform url</p></dd></dt>
+        <dt><span class="term">token :</span>
+            <dd><p class="para">ThingsBoard token</p></dd></dt>
+        <dt><span class="term">deviceID :</span>
+            <dd><p class="para">Device ID</p></dd></dt>
+        <dt><span class="term">keys :</span>
+            <dd><p class="para">A string array of the keys</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Retrieves the keys (variables) of a device in ThingsBoard. Data pushed to the device are stored in these keys.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// If you want to retrieve the variables in the device with id ABC123</span>
+<span class="scilabid">token</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getToken</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">user</span><span class="scilabdefault">,</span><span class="scilabid">pw</span><span class="scilabopenclose">)</span>
+<span class="scilabid">keys</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getKeys</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">token</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">ABC123</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="thingsboard_getData.html" class="link">thingsboard_getData</a> &#8212; Retrieves data from Thingsboard</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T., Bytecode</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_getDevices.html">&lt;&lt; thingsboard_getDevices</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingsboard_getToken.html">thingsboard_getToken &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

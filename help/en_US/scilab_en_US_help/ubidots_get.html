@@ -1,0 +1,91 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ubidots_get</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="ubidots_count.html">&lt;&lt; ubidots_count</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="ubidots_getdata.html">ubidots_getdata &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">bytecode_iot_module</a> &gt;&gt; <a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a> &gt; ubidots_get</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">ubidots_get</h1>
+    <p class="refpurpose">Retrieve data with other information as well from Ubidots sensor&#0039;s variable</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">timestamp</span><span class="default">, </span><span class="default">sen_val</span><span class="default">, </span><span class="default">data</span><span class="default">] = </span><span class="functionid">ubidots_get</span><span class="default">(</span><span class="default">tokenID</span><span class="default">,</span><span class="default">sensorID</span><span class="default">,</span><span class="default">num_data</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">tokenID :</span>
+            <dd><p class="para">Token ID</p></dd></dt>
+        <dt><span class="term">sensorID :</span>
+            <dd><p class="para">Sensor ID</p></dd></dt>
+        <dt><span class="term">num_data :</span>
+            <dd><p class="para">Numbers of data to get from the sensor&#0039;s variable, maximum 300</p></dd></dt>
+        <dt><span class="term">timestamp :</span>
+            <dd><p class="para">Time stamp in unix time milliseconds</p></dd></dt>
+        <dt><span class="term">sen_val :</span>
+            <dd><p class="para">Sensor data</p></dd></dt>
+        <dt><span class="term">data :</span>
+            <dd><p class="para">Structure of full details, always not required</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Get data to Ubidots sensor&#0039;s variable. As this function will return all the details for each sensors data, the maximum data could be retrived by this function is 300. To get all data with only timestamp and value, use ubidots_getdata instead.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="ubidots_getdata.html" class="link">ubidots_getdata</a> &#8212; Retrieve data with timestamp from Ubidots sensor&#0039;s variable</li>
+   <li class="member"><a href="ubidots_count.html" class="link">ubidots_count</a> &#8212; Check the number of data in a Ubidots sensor&#0039;s variable</li>
+   <li class="member"><a href="ubidots_listsource.html" class="link">ubidots_listsource</a> &#8212; List the source available in Ubidots account</li>
+   <li class="member"><a href="ubidots_listvar.html" class="link">ubidots_listvar</a> &#8212; List the variables available in Ubidots source</li>
+   <li class="member"><a href="ubidots_post.html" class="link">ubidots_post</a> &#8212; Post a data to Ubidots sensor&#0039;s variable</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T., C.L. Tan, Bytecode</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="ubidots_count.html">&lt;&lt; ubidots_count</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="ubidots_getdata.html">ubidots_getdata &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

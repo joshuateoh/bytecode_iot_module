@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingsboard_postData.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingsboard_postData" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingsboard_postData</refname>
+    <refpurpose>Push data to ThingsBoard</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   n = thingsboard_postData(url,posttoken,jsonbody)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> The ThingsBoard platform url</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>posttoken :</term>
+            <listitem><para> Device post token</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>jsonbody :</term>
+            <listitem><para> A data string in JSON Format</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>n :</term>
+            <listitem><para> Status code</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Push data to a device in ThingsBoard. The device post token is different from the token used in retrieving data. The data needs to be in the form of JSON format which can be created using create_JSON.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// If you want to push data to a device with id ABC123
+data = create_JSON("temp",24,"humidity",55)
+token = thingsboard_getToken(url,user,pw)
+[devicetoken,code] = thingsboard_getDeviceToken(url,token,"ABC123")
+n = thingsboard_postData(url,devicetoken,data)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="create_JSON">create_JSON</link></member>
+   <member><link linkend="thingsboard_getDeviceToken">thingsboard_getDeviceToken</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

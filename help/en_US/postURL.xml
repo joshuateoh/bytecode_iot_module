@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from postURL.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="postURL" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>postURL</refname>
+    <refpurpose>Post command for curl library</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [rep,stat,stderr] = postURL(url,cmd)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> A valid URL</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>cmd :</term>
+            <listitem><para> Post command to the site</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>rep :</term>
+            <listitem><para> Response</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>stat :</term>
+            <listitem><para> Message</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>stderr :</term>
+            <listitem><para> Error Message</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This is to POST the request to a supported website
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

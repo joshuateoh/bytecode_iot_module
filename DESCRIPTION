@@ -1,0 +1,31 @@
+Toolbox: bytecode_iot_module
+
+Title: Bytecode IOT Module
+
+Summary: Provides connectivity to several cloud platforms in Scilab
+
+Version: 1.0
+
+Author: Joshua Teoh
+        Tan Chin Luh 
+
+Maintainer: Joshua Teoh <joshua.teoh@bytecode-asia.com>
+            Tan Chin Luh <chinluh.tan@bytecode-asia.com>
+
+Category: Internet of Things
+
+Entity: Bytecode (formerly Trity Technologies)
+
+WebSite: https://www.bytecode-asia.com
+
+License: CeCILL
+
+ScilabVersion: >= 6.0
+
+Depends: 
+
+Date: 2019-23-08
+
+Description: Initial release for bytecode iot module
+ 
+

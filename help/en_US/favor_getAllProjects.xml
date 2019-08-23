@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from favor_getAllProjects.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="favor_getAllProjects" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>favor_getAllProjects</refname>
+    <refpurpose>Get all the projects of a user</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   out = favor_getAllProjects(api)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>out :</term>
+            <listitem><para> A structure containing the projects' properties</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>api :</term>
+            <listitem><para> The user's API key</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Retrieves all the projects of a user using the API key provided by api. The structure contains 3 fields. The first field (statusCode) shows the HTTP request result (200 means success). The second field (numFound) shows the number of projects found. The third field (results) contains a structure which contains all the properties of the projects.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="favor_createData">favor_createData</link></member>
+   <member><link linkend="favor_createSensors">favor_createSensors</link></member>
+   <member><link linkend="favor_filterSensor">favor_filterSensor</link></member>
+   <member><link linkend="favor_getAllApplications">favor_getAllApplications</link></member>
+   <member><link linkend="favor_getAllData">favor_getAllData</link></member>
+   <member><link linkend="favor_getAllDevices">favor_getAllDevices</link></member>
+   <member><link linkend="favor_getAllGroups">favor_getAllGroups</link></member>
+   <member><link linkend="favor_getAllProjects">favor_getAllProjects</link></member>
+   <member><link linkend="favor_getApplication">favor_getApplication</link></member>
+   <member><link linkend="favor_getDevice">favor_getDevice</link></member>
+   <member><link linkend="favor_getDeviceData">favor_getDeviceData</link></member>
+   <member><link linkend="favor_getGroup">favor_getGroup</link></member>
+   <member><link linkend="favor_getProject">favor_getProject</link></member>
+   <member><link linkend="favor_sendData">favor_sendData</link></member>
+   <member><link linkend="favor_struct2json">favor_struct2json</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

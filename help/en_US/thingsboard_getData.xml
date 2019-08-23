@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingsboard_getData.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingsboard_getData" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingsboard_getData</refname>
+    <refpurpose>Retrieves data from Thingsboard</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   data = thingsboard_getData(url,token,deviceID,key,n)
+   data = thingsboard_getData(url,token,deviceID,key,n,day_limit)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> The ThingsBoard platform url</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>token :</term>
+            <listitem><para> ThingsBoard token</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>deviceID :</term>
+            <listitem><para> Device ID</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>key :</term>
+            <listitem><para> The device's variable where the data will be extracted</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>n :</term>
+            <listitem><para> The maximum number of data to be pulled</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>day_limit :</term>
+            <listitem><para> The limit on the earliest data to be pulled</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Retrieves the data from a variable of a device in ThingsBoard.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// If your device id is ABC123 and contains a variable called temp
+deviceID = "ABC123"
+key = "temp"
+token = thingsboard_getToken(url,user,pw)
+data = thingsboard_getData(url,token,deviceID,key,100)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingsboard_getToken">thingsboard_getToken</link></member>
+   <member><link linkend="thingsboard_postData">thingsboard_postData</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

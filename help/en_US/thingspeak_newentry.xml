@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingspeak_newentry.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingspeak_newentry" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingspeak_newentry</refname>
+    <refpurpose>Create a structure to store the data that is to be sent to the ThingSpeak channel.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   new_entry=thingspeak_newentry(FieldName,FieldValue)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>FieldName :</term>
+            <listitem><para> The field names (field1,..,field8,latitude,longitude,elevation,status)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FieldValue :</term>
+            <listitem><para> The data to be stored</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>new_entry :</term>
+            <listitem><para> The data structure</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function creates a data structure to store the data that is to be sent to a ThingSpeak channel.
+The data structure is sent using thingspeak_update.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+new_entry = thingspeak_newentry("status","New update!","field1",25)
+entry_update = thingspeak_update(channelID,'private',new_entry,"writekey","")
+get_entry = thingspeak_fieldvalues(channelID,'private',"","readkey",1,"results",1,"status",%t)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingspeak_channelinfo">thingspeak_channelinfo</link></member>
+   <member><link linkend="thingspeak_fieldvalues">thingspeak_fieldvalues</link></member>
+   <member><link linkend="thingspeak_plot">thingspeak_plot</link></member>
+   <member><link linkend="thingspeak_update">thingspeak_update</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

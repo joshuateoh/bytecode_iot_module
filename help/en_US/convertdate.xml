@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from convertdate.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="convertdate" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>convertdate</refname>
+    <refpurpose>Convert date format</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   datestr = convertdate(x)
+   datestr = convertdate(x,tgt)
+   datestr = convertdate(x,tgt,src)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> String vector/scalar. Input date</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>tgt :</term>
+            <listitem><para> String. Target date format. Default is "yyyy.MM.dd.HH.mm.ss"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>src :</term>
+            <listitem><para> String. Input date format. Default assumed to be "EEE MMM dd HH:mm:ss z yyyy"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>datestr :</term>
+            <listitem><para> String vector/scalar. Returned date in new format</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function converts the date's format to another format
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Example 1
+datestr1 = convertdate("Mon Aug 05 14:38:00 MYT 2019")
+// Example 2
+newformat = "yyyy/MM/dd HH:mm:ss"
+datestr2 = convertdate("Mon Aug 05 14:38:00 MYT 2019",newformat)
+// Example 3
+oldformat = "dd-MMM-yyyy HH:mm"
+newformat = "HH:mm:ss MM/dd/yy"
+datestr3 = convertdate("05-Aug-2019 14:38",newformat,oldformat)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

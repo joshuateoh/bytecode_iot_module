@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from getFILE.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="getFILE" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>getFILE</refname>
+    <refpurpose>Download the files given in filename from a file server</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [fn, contents] = getFILE(url_ip, filename)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url_ip :</term>
+            <listitem><para> File server IP address</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>filename :</term>
+            <listitem><para> File names for the files to be downloaded</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>fn :</term>
+            <listitem><para> Last filename downloaded</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>contents :</term>
+            <listitem><para> Last contents of the file downloaded</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This is to download the files from a file server, by given filenames in a string vector
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+url_ip = "http://<somefileserver>"
+fl = filterFILE(url_ip,'.sce')
+[fn, contents] = getFILE(url_ip, fl)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="filterFILE">filterFILE</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>C.L. Tan, Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,96 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>thingsboard_getDevices</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_getDeviceToken.html">&lt;&lt; thingsboard_getDeviceToken</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingsboard_getKeys.html">thingsboard_getKeys &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">bytecode_iot_module</a> &gt;&gt; <a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a> &gt; thingsboard_getDevices</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">thingsboard_getDevices</h1>
+    <p class="refpurpose">Retrieve a user&#0039;s list of devices</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">devices</span><span class="default">, </span><span class="default">code</span><span class="default">] = </span><span class="functionid">thingsboard_getDevices</span><span class="default">(</span><span class="default">url</span><span class="default">,</span><span class="default">token</span><span class="default">)</span>
+<span class="default">[</span><span class="default">devices</span><span class="default">, </span><span class="default">code</span><span class="default">] = </span><span class="functionid">thingsboard_getDevices</span><span class="default">(</span><span class="default">url</span><span class="default">,</span><span class="default">token</span><span class="default">,</span><span class="default">namefilter</span><span class="default">)</span>
+<span class="default">[</span><span class="default">devices</span><span class="default">, </span><span class="default">code</span><span class="default">] = </span><span class="functionid">thingsboard_getDevices</span><span class="default">(</span><span class="default">url</span><span class="default">,</span><span class="default">token</span><span class="default">,</span><span class="default">namefilter</span><span class="default">,</span><span class="default">ndev</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">url :</span>
+            <dd><p class="para">The ThingsBoard platform url</p></dd></dt>
+        <dt><span class="term">token :</span>
+            <dd><p class="para">Thingsboard token</p></dd></dt>
+        <dt><span class="term">namefilter :</span>
+            <dd><p class="para">A string to filter devices based on the name</p></dd></dt>
+        <dt><span class="term">ndev :</span>
+            <dd><p class="para">Maximum number of devices to be retrieved</p></dd></dt>
+        <dt><span class="term">devices :</span>
+            <dd><p class="para">A N by 2 string array containing the device name and ID</p></dd></dt>
+        <dt><span class="term">code :</span>
+            <dd><p class="para">Status code</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">Retrieves a user&#0039;s devices&#0039; name and ID. Devices with specific names can be filtered using namefilter.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Retrieve all the user</span><span class="scilabcomment">&#0039;</span><span class="scilabcomment">s devices</span>
+<span class="scilabid">token</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getToken</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">user</span><span class="scilabdefault">,</span><span class="scilabid">pw</span><span class="scilabopenclose">)</span>
+<span class="scilabopenclose">[</span><span class="scilabid">devices</span><span class="scilabdefault">,</span><span class="scilabid">code</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getDevices</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">token</span><span class="scilabopenclose">)</span>
+<span class="scilabcomment">// Retrieve the user</span><span class="scilabcomment">&#0039;</span><span class="scilabcomment">s devices that contains </span><span class="scilabcomment">&#0034;</span><span class="scilabcomment">test</span><span class="scilabcomment">&#0034;</span><span class="scilabcomment"> in their name</span>
+<span class="scilabopenclose">[</span><span class="scilabid">devices</span><span class="scilabdefault">,</span><span class="scilabid">code</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">thingsboard_getDevices</span><span class="scilabopenclose">(</span><span class="scilabid">url</span><span class="scilabdefault">,</span><span class="scilabid">token</span><span class="scilabdefault">,</span><span class="scilabstring">&#0034;</span><span class="scilabstring">test</span><span class="scilabstring">&#0034;</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="thingsboard_getDeviceToken.html" class="link">thingsboard_getDeviceToken</a> &#8212; Retrieve a device&#0039;s token</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Joshua T., Bytecode</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="thingsboard_getDeviceToken.html">&lt;&lt; thingsboard_getDeviceToken</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_b5842177116d6ad78bba674971727a15.html">bytecode_iot_module</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="thingsboard_getKeys.html">thingsboard_getKeys &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

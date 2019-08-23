@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingsboard_getDeviceToken.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingsboard_getDeviceToken" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingsboard_getDeviceToken</refname>
+    <refpurpose>Retrieve a device's token</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [devicetoken,code] = thingsboard_getDeviceToken(url,token,deviceID)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> The ThingsBoard platform url</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>token :</term>
+            <listitem><para> Thingsboard token</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>deviceID :</term>
+            <listitem><para> Device id</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>devicetoken :</term>
+            <listitem><para> The device's token</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>code :</term>
+            <listitem><para> Status code</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Retrieves a device's token. This token is needed in order to push data to the device. Note that this token is different from the thingsboard_getToken's token.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// If you want to push data to a device with id ABC123
+data = create_JSON("temp",24,"humidity",55)
+token = thingsboard_getToken(url,user,pw)
+[devicetoken,code] = thingsboard_getDeviceToken(url,token,"ABC123")
+n = thingsboard_postData(url,devicetoken,data)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingsboard_postData">thingsboard_postData</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

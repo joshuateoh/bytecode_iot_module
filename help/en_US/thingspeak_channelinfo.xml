@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingspeak_channelinfo.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingspeak_channelinfo" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingspeak_channelinfo</refname>
+    <refpurpose>Get Thingspeak Channel Information</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   channel_info= thingspeak_channelinfo(channelID,privacy,apiWriteKey,apiReadKey)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>channelID :</term>
+            <listitem><para> channel ID in ThingSpeak</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>privacy :</term>
+            <listitem><para> Specify whether the channel is 'public' or 'private'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>apiWriteKey :</term>
+            <listitem><para> Write API Key of the channel</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>apiReadKey :</term>
+            <listitem><para> Read API Key of the channel.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>channel_info :</term>
+            <listitem><para> Channel information</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This is to display the information of the channel in the thingspeak cloud.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+channel_info= thingspeak_channelinfo(channelID,"private","writekey","readkey")
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingspeak_fieldvalues">thingspeak_fieldvalues</link></member>
+   <member><link linkend="thingspeak_newentry">thingspeak_newentry</link></member>
+   <member><link linkend="thingspeak_plot">thingspeak_plot</link></member>
+   <member><link linkend="thingspeak_update">thingspeak_update</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

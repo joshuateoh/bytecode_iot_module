@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingspeak_update.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingspeak_update" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingspeak_update</refname>
+    <refpurpose>Update a Thingspeak Channel</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   entryID=thingspeak_update(channelID,privacy,datastruct,apiWriteKey,apiReadKey)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>channelID :</term>
+            <listitem><para> ID of the channel in ThingSpeak</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>privacy :</term>
+            <listitem><para> Specify whether the channel is 'public' or 'private'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>datastruct :</term>
+            <listitem><para> The data structure created using thingspeak_newentry</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>apiWriteKey :</term>
+            <listitem><para> Write API Key of the channel. The Write Key can be used as the Read API Key as well.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>apiReadKey :</term>
+            <listitem><para> Read API Key of the channel.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>entryID :</term>
+            <listitem><para> The entry ID</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Updates a ThingSpeak channel using the data structure created by thingspeak_newentry.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+new_entry = thingspeak_newentry("status","New update!","field1",20)
+entry_update = thingspeak_update(channelID,'private',new_entry,"writekey","")
+get_entry = thingspeak_fieldvalues(channelID,'private',"","readkey",1,"results",1,"status",%t)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingspeak_channelinfo">thingspeak_channelinfo</link></member>
+   <member><link linkend="thingspeak_fieldvalues">thingspeak_fieldvalues</link></member>
+   <member><link linkend="thingspeak_newentry">thingspeak_newentry</link></member>
+   <member><link linkend="thingspeak_plot">thingspeak_plot</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

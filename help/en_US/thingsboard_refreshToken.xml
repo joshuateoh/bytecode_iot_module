@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingsboard_refreshToken.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingsboard_refreshToken" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingsboard_refreshToken</refname>
+    <refpurpose>Refreshes a ThingsBoard token.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   newtoken = thingsboard_refreshToken(url,oldtoken)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>url :</term>
+            <listitem><para> The ThingsBoard platform url</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>oldtoken :</term>
+            <listitem><para> A struc containing the expired token</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>newtoken :</term>
+            <listitem><para> A struc containing the new token</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Refreshes an expired ThingsBoard token using the old token. If the refresh token has also expired, you need to retrieve a new token using thingsboard_getToken
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+token = thingdboard_getToken(url,user,pw)
+// After some time, the token will expire and needs to be refreshed
+token = thingsboard_refreshToken(url,token)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingsboard_getToken">thingsboard_getToken</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Joshua T., Bytecode</member>
+   </simplelist>
+</refsection>
+</refentry>

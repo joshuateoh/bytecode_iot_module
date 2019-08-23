@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thingspeak_fieldvalues.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thingspeak_fieldvalues" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thingspeak_fieldvalues</refname>
+    <refpurpose>Find (GET) values from a field in a ThingSpeak channel</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr)
+   fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr,optionName,optionValues)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>channelID :</term>
+            <listitem><para> ID of the channel in ThingSpeak</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>privacy :</term>
+            <listitem><para> Specify whether the channel is 'public' or 'private'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>apiWriteKey :</term>
+            <listitem><para> Write API Key of the channel</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>apiReadKey :</term>
+            <listitem><para> Read API Key of the channel</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>fieldnbr :</term>
+            <listitem><para> The field number to retrieve the data from (1-8)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>optionName, optionValues :</term>
+            <listitem><para> Additional options on how to retrieve the field values</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>fieldvalues :</term>
+            <listitem><para> Return the field's values</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+This function is used to get values from the thingspeak channel. The additional options are:
+   </para>
+   <para>
+results : number of values to retrieve
+   </para>
+   <para>
+days : retrieve values up to x number of days
+   </para>
+   <para>
+min : minimum values to retrieve
+   </para>
+   <para>
+max : maximum value to retrieve
+   </para>
+   <para>
+sum : sum of values in time intervals
+   </para>
+   <para>
+average : average values in time intervals
+   </para>
+   <para>
+median : median values in time intervals
+   </para>
+   <para>
+timescale : first value for each time interval
+   </para>
+   <para>
+startdate : Retrieve the values starting from the given date. The format is "yyyy-MM-dd HH:mm:ss". The default timezone for the date is UTC. You can change the timezone using the 'offset' option.
+   </para>
+   <para>
+enddate : Retrieve the values up to the given date. The format is "yyyy-MM-dd HH:mm:ss". The default timezone for the date is UTC. You can change the timezone using the 'offset' option.
+   </para>
+   <para>
+offset : Change the timezone used by 'startdate' and 'enddate' options.
+   </para>
+   <para>
+status : Boolean input on whether to include status for each entry.
+   </para>
+   <para>
+location : Boolean input on whether to include the location (latitude, longitude,elevation) for each entry.
+   </para>
+   <para>
+The allowed time intervals for sum, median, average and timescale are 10, 15, 20, 30, 60, 240, 720 and 1440 minutes.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+fv1=thingspeak_fieldvalues(channelID,'private','','readkey',1) //  By default, retrieve entries entered within the last 24 hours
+fv2=thingspeak_fieldvalues(channelID,'private','','readkey',1,'results',5) // Get the last 5 entries
+fv3=thingspeak_fieldvalues(channelID,'private','','readkey',1,'days',10,'min',4) // Get from the last 10 days, entries with minimum value of 4
+fv4=thingspeak_fieldvalues(channelID,'private','','readkey',1,'startdate',"2015-05-12 8:25:00") // Get values starting from 2015-05-12 8:25:00 (UTC)
+fv5=thingspeak_fieldvalues(channelID,'private','','readkey',1,'startdate',"2015-05-12 8:25:00","offset",8) // Get values starting from 2015-05-12 8:25:00 (+8 GMT)
+fv6=thingspeak_fieldvalues(channelID,'private','','readkey',1,'results',10,'status',%t,'location',%t) // Include the status and location fields
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thingspeak_channelinfo">thingspeak_channelinfo</link></member>
+   <member><link linkend="thingspeak_newentry">thingspeak_newentry</link></member>
+   <member><link linkend="thingspeak_plot">thingspeak_plot</link></member>
+   <member><link linkend="thingspeak_update">thingspeak_update</link></member>
+   </simplelist>
+</refsection>
+</refentry>
