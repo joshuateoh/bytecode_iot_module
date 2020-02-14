@@ -15,7 +15,6 @@
 *.la
 *.lo
 *.jar
-lib
 
 # Shared objects (inc. Windows DLLs)
 *.dll
