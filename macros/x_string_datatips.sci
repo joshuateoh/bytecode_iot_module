@@ -19,15 +19,10 @@ function x_string_datatips()
     e=gce();e=e.children;    
     d1=datatipCreate(e(1),700);
     x = e.parent.parent.user_data;
-    datatipSetDisplay(d1,"mydisplay")
+    datatipSetDisplay(d1,"iot_display")
 endfunction
 
-function str=mydisplay(h)
-    pt = h.data;
-    hh = gca();
-    x = hh.user_data;
-    str=msprintf('%s\n %g', x(pt(1)),pt(2))
-endfunction
+
 
 
 
