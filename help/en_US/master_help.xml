@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book [
 <!--Begin Entities-->
-<!ENTITY afba8d6ea3e948127de0864a9b85bd826 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/bg_display.xml">
-<!ENTITY a1453837af8c8543345471988e0888fdb SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/bg_run.xml">
-<!ENTITY a93f7799b2be5939907798141b4b9c2a0 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/bg_terminate.xml">
-<!ENTITY a31d67711fec64c0f04c51fb92b426397 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/convertdate.xml">
-<!ENTITY a88a9d4b75fa39b126f4c87baea3d0aeb SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/corr_matrix.xml">
-<!ENTITY a17604b6b6a8705c266ba481d81c85ae1 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/create_JSON.xml">
-<!ENTITY a8b0e94158dfa1a114d222611e63ffb43 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_createData.xml">
-<!ENTITY a3ce5858c3c9951af29a9dd5cbae202ab SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_createSensors.xml">
-<!ENTITY a2f2026c6e331513b62b534231fdab25a SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_delDataStream.xml">
-<!ENTITY af2eb106e107aa01df8c9a2aaaf36301c SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_filterSensor.xml">
-<!ENTITY aff12ffd06593dee42c37fe845075d57e SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getAllApplications.xml">
-<!ENTITY a68d5cbbd07a0eae7cfc24435e2563c92 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getAllData.xml">
-<!ENTITY ad134ef5610b0c90798535282439846e3 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getAllDevices.xml">
-<!ENTITY acc0b6043bf396aacb99b6c9d1443a5cb SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getAllGroups.xml">
-<!ENTITY a5e8daad37217089aad04b2df0cf6380c SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getAllProjects.xml">
-<!ENTITY aa5536e3c8d47b62c47c8e231c3bfa173 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getApplication.xml">
-<!ENTITY a4669961536cba5759bd4c14f35cae07a SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getDevice.xml">
-<!ENTITY a945cc36c831f0608224d2577ceb965a5 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getDeviceData.xml">
-<!ENTITY a08af4a8848d6fd8717603d366028b8b9 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getGroup.xml">
-<!ENTITY abb7a8f6b06f5a892ad1a1e712d7bc780 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_getProject.xml">
-<!ENTITY a031a03df31e515315b71962182fc0cc8 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_sendData.xml">
-<!ENTITY a5b5ab96dee3a98054c0170705981de9c SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/favor_struct2json.xml">
-<!ENTITY ac2c683e1fbe7c15195bf680a6f7491ed SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/filterFILE.xml">
-<!ENTITY a263914869d252d1dacc158b0193d90a7 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/getFILE.xml">
-<!ENTITY ace50ae19c7ed71046a220db5a1d56156 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/postURL.xml">
-<!ENTITY afef54379ba86f461bffa3b3b309e97a1 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/sci2ts.xml">
-<!ENTITY a158163697f9a09b4fcf4e3b71fc852f2 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/smooth2.xml">
-<!ENTITY a73f5896105cb3cabc5e3de35c0c6d92a SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/str2JSON.xml">
-<!ENTITY a7f2d66c7b5ce0046f7cfab6c1778b12a SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/str2ts.xml">
-<!ENTITY aad60e5104d43f0d4f59de6538a034ead SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/strtom.xml">
-<!ENTITY a8e2798cb9ba375041ca79e2eaa0a7991 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_getData.xml">
-<!ENTITY acb2b9823a041438143b8bd4a6590147a SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_getDeviceToken.xml">
-<!ENTITY ae81c0f8662ca1fb5908c66ad9c6cd52f SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_getDevices.xml">
-<!ENTITY ac77e767c35aeae3991c66def9a40f3db SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_getKeys.xml">
-<!ENTITY ae31b3edb6b9f089ca01082ee2515be5e SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_getToken.xml">
-<!ENTITY a1cb48194c4fef23cba14de3aefe4efd8 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_postData.xml">
-<!ENTITY aa6193582aaef2c357724f81def3e6755 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingsboard_refreshToken.xml">
-<!ENTITY ad74a7c7e99e917bb766fef3fdf956199 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingspeak_channelinfo.xml">
-<!ENTITY af4de1c2c08f1180b4cdde39ec501d7d1 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingspeak_fieldvalues.xml">
-<!ENTITY a053b2ba2a6479a9b86cd26d50f7ae17d SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingspeak_newentry.xml">
-<!ENTITY abb730767a46b6fe5f40a96362b1f0286 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingspeak_plot.xml">
-<!ENTITY a773e791806d1bd5c2b36ab8056f3fc4f SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/thingspeak_update.xml">
-<!ENTITY a5c820123b21107c9908b0d10dc10bbe4 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ts2sci.xml">
-<!ENTITY a84019c661ddf17b9210d8594c50883a1 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ts2str.xml">
-<!ENTITY a6d61f99a558dcd8112bf351d511dea1c SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ts2vec.xml">
-<!ENTITY a9b975ec1aab071178446c4ce7459df14 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ubidots_count.xml">
-<!ENTITY ad4dc74ec56442b67704ba05602c9d8fc SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ubidots_get.xml">
-<!ENTITY a9f7932d98414cdcad03ca240400ecffc SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ubidots_getdata.xml">
-<!ENTITY a8b41302c36d1ffeaee286a8a68d4ef6e SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ubidots_listsource.xml">
-<!ENTITY a2ca1b9266a77da988ba594de2dc18f02 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ubidots_listvar.xml">
-<!ENTITY a13af2b8c50327a7bb0ae42236aa95898 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/ubidots_post.xml">
-<!ENTITY a73d3ad9d108de99558f20b369f25bed6 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/vec2str.xml">
-<!ENTITY a3ea0690807bc108527f7280b2963f29b SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/vec2ts.xml">
-<!ENTITY a33224687d3bb88e756482bc4d9b46376 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/x_string_datatips.xml">
-<!ENTITY afdeb04d259cdf47eeb76881794948975 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/x_string_plot.xml">
-<!ENTITY ab21a289c8592ac0f12cf5e8e65e8a879 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/xmlScanTable.xml">
-<!ENTITY a0852204e788359b54775ea3d2cd3ade4 SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/xticks2string.xml">
-<!ENTITY a0dbf827326cdbc00815b263f98e9b6cb SYSTEM "file:///C:/Users/Joshua/AppData/Roaming/Scilab/scilab-6.0.2/atoms/x64/trity_iot_module/1.2/help/en_US/yticks2string.xml">
+<!ENTITY a52a70f5826b60fab6308b1743da1fe2d SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/bg_display.xml">
+<!ENTITY ae29409a7278abaa4a6670322e1ecd36d SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/bg_run.xml">
+<!ENTITY a0add243d1a6f0b5e11129332fee8bf51 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/bg_terminate.xml">
+<!ENTITY a7ecd12236b6d3fd15eb4c8a20d62dc28 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/convertdate.xml">
+<!ENTITY a4f6388afdcc6eea3aa9e4d4f0709fe67 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/corr_matrix.xml">
+<!ENTITY a34245da5da3b6d1a83c297bfc9b81710 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/create_JSON.xml">
+<!ENTITY a0a11b93facb05ca4802ac9009e4c7918 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_createData.xml">
+<!ENTITY a3b771dd0b5d564d92daa759a072a29fe SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_createSensors.xml">
+<!ENTITY a15bc5d8deae465e16289cb74474b069f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_delDataStream.xml">
+<!ENTITY aac100062d3975e838169f923993975b8 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_filterSensor.xml">
+<!ENTITY a468c39b5da7a80781682db8451fedd3f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getAllApplications.xml">
+<!ENTITY a07e0c9c7b260c44d0c7385f254230400 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getAllData.xml">
+<!ENTITY a58ae8974b6cb4c8a8b69668ab6c89dee SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getAllDevices.xml">
+<!ENTITY a3705a42e37fb4f2f4cdb31910e838419 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getAllGroups.xml">
+<!ENTITY adf30b672e9dfb438f3430434a549e905 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getAllProjects.xml">
+<!ENTITY a9f8e81ba8b81f24df22d1801a2465227 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getApplication.xml">
+<!ENTITY ac2e4137beb019c7940ce964aeaf815e2 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getDevice.xml">
+<!ENTITY a469851b71f32aefb7042d23018216afa SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getDeviceData.xml">
+<!ENTITY aabe220c2764e4b2b341cf0002edc7116 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getGroup.xml">
+<!ENTITY a2349750dfff840d01250bd43447579bb SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_getProject.xml">
+<!ENTITY a8ccf88924a0c6482056ca1c5a3c8fb2a SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_sendData.xml">
+<!ENTITY ad378fbd2ce401819e29995a6a478b1f2 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_struct2json.xml">
+<!ENTITY a988406f74a815fceebb04277266ea35f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/filterFILE.xml">
+<!ENTITY af2b51ac8a1a054ef4cc7b636e74ca888 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/getFILE.xml">
+<!ENTITY afd386546e82c609997612cf1a4421b80 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/postURL.xml">
+<!ENTITY a924d6fb2d57d7e91cccc55deeb6d6ce9 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/sci2ts.xml">
+<!ENTITY a8ac1c89f2a93dc76510b66fd0298483f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/smooth2.xml">
+<!ENTITY a0789e173df8e0c84a08e96df2e557ccd SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/str2JSON.xml">
+<!ENTITY a052c2567aebde5d7f189d60d5485a177 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/str2ts.xml">
+<!ENTITY a966e4812dbd9744a5664bbf96daf9dad SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/strtom.xml">
+<!ENTITY a014cbddd7b6325300bf15615c248571b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_getData.xml">
+<!ENTITY a1230c057fa1b37228531836603ecc516 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_getDeviceToken.xml">
+<!ENTITY aa04f24cadf9a96ec91cf1ccaceb90a64 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_getDevices.xml">
+<!ENTITY a21e6fbcc148546012dbed56df9222dbc SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_getKeys.xml">
+<!ENTITY a8c1af9e7480ced4473442c613406a8a1 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_getToken.xml">
+<!ENTITY a639abb73575087ee24e777da08cb1e64 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_postData.xml">
+<!ENTITY acb80437b1d9452a4ba8cc169176f54c0 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingsboard_refreshToken.xml">
+<!ENTITY a41a169546c436e7cf04535b204e5bac7 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingspeak_channelinfo.xml">
+<!ENTITY a269fab3ecfa9d8471882401312a49987 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingspeak_fieldvalues.xml">
+<!ENTITY a36613967f32b1e4ac7ee1e442721d78c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingspeak_newentry.xml">
+<!ENTITY a65251bc0c1765467b07d1426a132c158 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingspeak_plot.xml">
+<!ENTITY a11a0530924fddfca77b6ca1e792218da SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/thingspeak_update.xml">
+<!ENTITY a0d3dd1ddfdba2721bacea0cc6ee8575c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ts2sci.xml">
+<!ENTITY a3647297958e47146674c1a3e87425acc SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ts2str.xml">
+<!ENTITY abbe7d1d7dd8babe825d34506ca2b6edc SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ts2vec.xml">
+<!ENTITY ad02b87e09b51529b9672b2ad78d1ee72 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ubidots_count.xml">
+<!ENTITY ac70f81807210e5c87d03c65d8136ffa4 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ubidots_get.xml">
+<!ENTITY ad3a01ad1758b3dc4a8f858ed40c0f49d SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ubidots_getdata.xml">
+<!ENTITY aa8fef7547b133f8b4dd15a8b7f118f4f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ubidots_listsource.xml">
+<!ENTITY afa2377b1358f16889c2259932e46cf35 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ubidots_listvar.xml">
+<!ENTITY a173bb34212c90ad0da9128332a8882fa SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/ubidots_post.xml">
+<!ENTITY ad907f3982cb8d2bdeab29b8d18362436 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/vec2str.xml">
+<!ENTITY ad0e192967144b6c78159efe116a93dc9 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/vec2ts.xml">
+<!ENTITY a6286a16a0e82dd347445c11f99f8d588 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/x_string_datatips.xml">
+<!ENTITY a688dd0c17fc2f72c497068b87f267936 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/x_string_plot.xml">
+<!ENTITY a9a37b17f478ba82252f8e149513d3a07 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/xmlScanTable.xml">
+<!ENTITY a45177bc761fb82648c2c9553d06240d0 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/xticks2string.xml">
+<!ENTITY aaedeed449585bbf41f25e734b9c3ad7b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/yticks2string.xml">
 <!--End Entities-->
 ]>
 <book version="5.0-subset Scilab" xml:lang="en_US"
@@ -73,65 +73,65 @@
     <title>bytecode_iot_module</title>
   </info>
 
-<part xml:id='section_b5842177116d6ad78bba674971727a15'>
+<part xml:id='section_8b54c44353989cdf127849c9bb5a5419'>
 <title>bytecode_iot_module</title>
-&afba8d6ea3e948127de0864a9b85bd826;
-&a1453837af8c8543345471988e0888fdb;
-&a93f7799b2be5939907798141b4b9c2a0;
-&a31d67711fec64c0f04c51fb92b426397;
-&a88a9d4b75fa39b126f4c87baea3d0aeb;
-&a17604b6b6a8705c266ba481d81c85ae1;
-&a8b0e94158dfa1a114d222611e63ffb43;
-&a3ce5858c3c9951af29a9dd5cbae202ab;
-&a2f2026c6e331513b62b534231fdab25a;
-&af2eb106e107aa01df8c9a2aaaf36301c;
-&aff12ffd06593dee42c37fe845075d57e;
-&a68d5cbbd07a0eae7cfc24435e2563c92;
-&ad134ef5610b0c90798535282439846e3;
-&acc0b6043bf396aacb99b6c9d1443a5cb;
-&a5e8daad37217089aad04b2df0cf6380c;
-&aa5536e3c8d47b62c47c8e231c3bfa173;
-&a4669961536cba5759bd4c14f35cae07a;
-&a945cc36c831f0608224d2577ceb965a5;
-&a08af4a8848d6fd8717603d366028b8b9;
-&abb7a8f6b06f5a892ad1a1e712d7bc780;
-&a031a03df31e515315b71962182fc0cc8;
-&a5b5ab96dee3a98054c0170705981de9c;
-&ac2c683e1fbe7c15195bf680a6f7491ed;
-&a263914869d252d1dacc158b0193d90a7;
-&ace50ae19c7ed71046a220db5a1d56156;
-&afef54379ba86f461bffa3b3b309e97a1;
-&a158163697f9a09b4fcf4e3b71fc852f2;
-&a73f5896105cb3cabc5e3de35c0c6d92a;
-&a7f2d66c7b5ce0046f7cfab6c1778b12a;
-&aad60e5104d43f0d4f59de6538a034ead;
-&a8e2798cb9ba375041ca79e2eaa0a7991;
-&acb2b9823a041438143b8bd4a6590147a;
-&ae81c0f8662ca1fb5908c66ad9c6cd52f;
-&ac77e767c35aeae3991c66def9a40f3db;
-&ae31b3edb6b9f089ca01082ee2515be5e;
-&a1cb48194c4fef23cba14de3aefe4efd8;
-&aa6193582aaef2c357724f81def3e6755;
-&ad74a7c7e99e917bb766fef3fdf956199;
-&af4de1c2c08f1180b4cdde39ec501d7d1;
-&a053b2ba2a6479a9b86cd26d50f7ae17d;
-&abb730767a46b6fe5f40a96362b1f0286;
-&a773e791806d1bd5c2b36ab8056f3fc4f;
-&a5c820123b21107c9908b0d10dc10bbe4;
-&a84019c661ddf17b9210d8594c50883a1;
-&a6d61f99a558dcd8112bf351d511dea1c;
-&a9b975ec1aab071178446c4ce7459df14;
-&ad4dc74ec56442b67704ba05602c9d8fc;
-&a9f7932d98414cdcad03ca240400ecffc;
-&a8b41302c36d1ffeaee286a8a68d4ef6e;
-&a2ca1b9266a77da988ba594de2dc18f02;
-&a13af2b8c50327a7bb0ae42236aa95898;
-&a73d3ad9d108de99558f20b369f25bed6;
-&a3ea0690807bc108527f7280b2963f29b;
-&a33224687d3bb88e756482bc4d9b46376;
-&afdeb04d259cdf47eeb76881794948975;
-&ab21a289c8592ac0f12cf5e8e65e8a879;
-&a0852204e788359b54775ea3d2cd3ade4;
-&a0dbf827326cdbc00815b263f98e9b6cb;
+&a52a70f5826b60fab6308b1743da1fe2d;
+&ae29409a7278abaa4a6670322e1ecd36d;
+&a0add243d1a6f0b5e11129332fee8bf51;
+&a7ecd12236b6d3fd15eb4c8a20d62dc28;
+&a4f6388afdcc6eea3aa9e4d4f0709fe67;
+&a34245da5da3b6d1a83c297bfc9b81710;
+&a0a11b93facb05ca4802ac9009e4c7918;
+&a3b771dd0b5d564d92daa759a072a29fe;
+&a15bc5d8deae465e16289cb74474b069f;
+&aac100062d3975e838169f923993975b8;
+&a468c39b5da7a80781682db8451fedd3f;
+&a07e0c9c7b260c44d0c7385f254230400;
+&a58ae8974b6cb4c8a8b69668ab6c89dee;
+&a3705a42e37fb4f2f4cdb31910e838419;
+&adf30b672e9dfb438f3430434a549e905;
+&a9f8e81ba8b81f24df22d1801a2465227;
+&ac2e4137beb019c7940ce964aeaf815e2;
+&a469851b71f32aefb7042d23018216afa;
+&aabe220c2764e4b2b341cf0002edc7116;
+&a2349750dfff840d01250bd43447579bb;
+&a8ccf88924a0c6482056ca1c5a3c8fb2a;
+&ad378fbd2ce401819e29995a6a478b1f2;
+&a988406f74a815fceebb04277266ea35f;
+&af2b51ac8a1a054ef4cc7b636e74ca888;
+&afd386546e82c609997612cf1a4421b80;
+&a924d6fb2d57d7e91cccc55deeb6d6ce9;
+&a8ac1c89f2a93dc76510b66fd0298483f;
+&a0789e173df8e0c84a08e96df2e557ccd;
+&a052c2567aebde5d7f189d60d5485a177;
+&a966e4812dbd9744a5664bbf96daf9dad;
+&a014cbddd7b6325300bf15615c248571b;
+&a1230c057fa1b37228531836603ecc516;
+&aa04f24cadf9a96ec91cf1ccaceb90a64;
+&a21e6fbcc148546012dbed56df9222dbc;
+&a8c1af9e7480ced4473442c613406a8a1;
+&a639abb73575087ee24e777da08cb1e64;
+&acb80437b1d9452a4ba8cc169176f54c0;
+&a41a169546c436e7cf04535b204e5bac7;
+&a269fab3ecfa9d8471882401312a49987;
+&a36613967f32b1e4ac7ee1e442721d78c;
+&a65251bc0c1765467b07d1426a132c158;
+&a11a0530924fddfca77b6ca1e792218da;
+&a0d3dd1ddfdba2721bacea0cc6ee8575c;
+&a3647297958e47146674c1a3e87425acc;
+&abbe7d1d7dd8babe825d34506ca2b6edc;
+&ad02b87e09b51529b9672b2ad78d1ee72;
+&ac70f81807210e5c87d03c65d8136ffa4;
+&ad3a01ad1758b3dc4a8f858ed40c0f49d;
+&aa8fef7547b133f8b4dd15a8b7f118f4f;
+&afa2377b1358f16889c2259932e46cf35;
+&a173bb34212c90ad0da9128332a8882fa;
+&ad907f3982cb8d2bdeab29b8d18362436;
+&ad0e192967144b6c78159efe116a93dc9;
+&a6286a16a0e82dd347445c11f99f8d588;
+&a688dd0c17fc2f72c497068b87f267936;
+&a9a37b17f478ba82252f8e149513d3a07;
+&a45177bc761fb82648c2c9553d06240d0;
+&aaedeed449585bbf41f25e734b9c3ad7b;
 </part>
 </book>
