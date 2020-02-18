@@ -27,6 +27,7 @@
 <tocitem target="favor_struct2json" text="favor_struct2json"/>
 <tocitem target="filterFILE" text="filterFILE"/>
 <tocitem target="getFILE" text="getFILE"/>
+<tocitem target="iot_display" text="iot_display"/>
 <tocitem target="postURL" text="postURL"/>
 <tocitem target="sci2ts" text="sci2ts"/>
 <tocitem target="smooth2" text="smooth2"/>
@@ -58,6 +59,7 @@
 <tocitem target="vec2ts" text="vec2ts"/>
 <tocitem target="x_string_datatips" text="x_string_datatips"/>
 <tocitem target="x_string_plot" text="x_string_plot"/>
+<tocitem target="xmlScanAllTable" text="xmlScanAllTable"/>
 <tocitem target="xmlScanTable" text="xmlScanTable"/>
 <tocitem target="xticks2string" text="xticks2string"/>
 <tocitem target="yticks2string" text="yticks2string"/>

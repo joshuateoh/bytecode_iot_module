@@ -25,6 +25,7 @@
 <!ENTITY ad378fbd2ce401819e29995a6a478b1f2 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/favor_struct2json.xml">
 <!ENTITY a988406f74a815fceebb04277266ea35f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/filterFILE.xml">
 <!ENTITY af2b51ac8a1a054ef4cc7b636e74ca888 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/getFILE.xml">
+<!ENTITY aa0f7df51ae393e9b156a15bd01e22fab SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/iot_display.xml">
 <!ENTITY afd386546e82c609997612cf1a4421b80 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/postURL.xml">
 <!ENTITY a924d6fb2d57d7e91cccc55deeb6d6ce9 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/sci2ts.xml">
 <!ENTITY a8ac1c89f2a93dc76510b66fd0298483f SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/smooth2.xml">
@@ -56,6 +57,7 @@
 <!ENTITY ad0e192967144b6c78159efe116a93dc9 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/vec2ts.xml">
 <!ENTITY a6286a16a0e82dd347445c11f99f8d588 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/x_string_datatips.xml">
 <!ENTITY a688dd0c17fc2f72c497068b87f267936 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/x_string_plot.xml">
+<!ENTITY a4f8e372d2f651192755e2a9dd864781c SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/xmlScanAllTable.xml">
 <!ENTITY a9a37b17f478ba82252f8e149513d3a07 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/xmlScanTable.xml">
 <!ENTITY a45177bc761fb82648c2c9553d06240d0 SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/xticks2string.xml">
 <!ENTITY aaedeed449585bbf41f25e734b9c3ad7b SYSTEM "file:///C:/Program Files/scilab-6.0.2/contrib/bytecode_iot_module/help/en_US/yticks2string.xml">
@@ -99,6 +101,7 @@
 &ad378fbd2ce401819e29995a6a478b1f2;
 &a988406f74a815fceebb04277266ea35f;
 &af2b51ac8a1a054ef4cc7b636e74ca888;
+&aa0f7df51ae393e9b156a15bd01e22fab;
 &afd386546e82c609997612cf1a4421b80;
 &a924d6fb2d57d7e91cccc55deeb6d6ce9;
 &a8ac1c89f2a93dc76510b66fd0298483f;
@@ -130,6 +133,7 @@
 &ad0e192967144b6c78159efe116a93dc9;
 &a6286a16a0e82dd347445c11f99f8d588;
 &a688dd0c17fc2f72c497068b87f267936;
+&a4f8e372d2f651192755e2a9dd864781c;
 &a9a37b17f478ba82252f8e149513d3a07;
 &a45177bc761fb82648c2c9553d06240d0;
 &aaedeed449585bbf41f25e734b9c3ad7b;

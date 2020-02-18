@@ -24,7 +24,7 @@
 <refsynopsisdiv>
    <title>Syntax</title>
    <synopsis>
-   tb = xmlScanTable(doc, tbname,level)
+   tb = xmlScanTable(doc, tbname, with_header)
    
    </synopsis>
 </refsynopsisdiv>
@@ -37,12 +37,12 @@
             <listitem><para> An xml document which is obtained from htmlRead</para></listitem>
         </varlistentry>
         <varlistentry>
-            <term>tbname :</term>
-            <listitem><para> Table name given in the "class" tag</para></listitem>
+            <term>tbid :</term>
+            <listitem><para> Table id given in the "id" tag (second search on "class" tag)</para></listitem>
         </varlistentry>
         <varlistentry>
-            <term>level :</term>
-            <listitem><para> The nth level to the access of table data</para></listitem>
+            <term>with_header :</term>
+            <listitem><para> Table with header, default is %t</para></listitem>
         </varlistentry>
         <varlistentry>
             <term>tb :</term>
@@ -65,6 +65,7 @@ This function used to extract xml/html table and return it to the Scilab as stri
 <refsection role="see also">
    <title>See also</title>
    <simplelist type="inline">
+   <member><link linkend="xmlScanAllTable">xmlScanAllTable</link></member>
    </simplelist>
 </refsection>
 

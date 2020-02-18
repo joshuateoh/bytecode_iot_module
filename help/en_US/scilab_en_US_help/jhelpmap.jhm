@@ -27,6 +27,7 @@
 <mapID target="favor_struct2json" url="favor_struct2json.html"/>
 <mapID target="filterFILE" url="filterFILE.html"/>
 <mapID target="getFILE" url="getFILE.html"/>
+<mapID target="iot_display" url="iot_display.html"/>
 <mapID target="postURL" url="postURL.html"/>
 <mapID target="sci2ts" url="sci2ts.html"/>
 <mapID target="smooth2" url="smooth2.html"/>
@@ -58,6 +59,7 @@
 <mapID target="vec2ts" url="vec2ts.html"/>
 <mapID target="x_string_datatips" url="x_string_datatips.html"/>
 <mapID target="x_string_plot" url="x_string_plot.html"/>
+<mapID target="xmlScanAllTable" url="xmlScanAllTable.html"/>
 <mapID target="xmlScanTable" url="xmlScanTable.html"/>
 <mapID target="xticks2string" url="xticks2string.html"/>
 <mapID target="yticks2string" url="yticks2string.html"/>

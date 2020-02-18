@@ -1,77 +1,56 @@
-function tb = xmlScanTable(doc, tbname,level)
-//  Import xml/html Table into Scilab
-//
-// Syntax
-//     tb = xmlScanTable(doc, tbname,level)
-//
-// Parameters
-//     doc : An xml document which is obtained from htmlRead
-//     tbname : Table name given in the "class" tag
-//     level : The nth level to the access of table data
-//     tb : Return table in string
-//
-// Description
-//    This function used to extract xml/html table and return it to the Scilab as string.
-//    
-//    
-// See also
-//
-// Authors
-//     C.L. Tan, Bytecode
+function tb = xmlScanTable(doc,tbid,with_header)
+    //  Import xml/html Table into Scilab
+    //
+    // Syntax
+    //     tb = xmlScanTable(doc, tbname, with_header)
+    //
+    // Parameters
+    //     doc : An xml document which is obtained from htmlRead
+    //     tbid : Table id given in the "id" tag (second search on "class" tag)
+    //     with_header : Table with header, default is %t
+    //     tb : Return table in string
+    //
+    // Description
+    //    This function used to extract xml/html table and return it to the Scilab as string.
+    //    
+    //    
+    // See also
+    //     xmlScanAllTable
+    //
+    // Authors
+    //     C.L. Tan, Bytecode
 
     rhs=argn(2);
     lines(0);
     // Error Checking
-    if rhs < 2; error("Expect at least 2 arguments, doc and tbname"); end    
-    if rhs < 3; level = 1; end
+    if rhs < 2; error("Expect at least 2 arguments, doc and tbid"); end    
+    if rhs < 3; with_header = %t; end
 
-
-    if level == 1 then
-        xp = xmlXPath(doc, '//table[contains(@class,""' + tbname + '"")]');
-        rows = xp(1).children.size;
-        cols = xp(1).children(1).children.size;
-
-        tb = '';
-        for cnt1 = 1:rows,
-            for cnt2 = 1:cols,
-                tmpdata = xp(1).children(cnt1).children(cnt2).content;
-                tmpdata2 = stripblanks(strcat(tmpdata));
-                if ascii(tmpdata2) == 13 then 
-                    tmpdata2 = '';
-                end,
-                tb(cnt1, cnt2) = tmpdata2;
-
-            end,
-        end,
-    else
-        xp = xmlXPath(doc, '//table[contains(@class,""' + tbname + '"")]');
+    xp = xmlXPath(doc, '//table[contains(@id,""' + tbid + '"")]');
+    if xp.size == 0 then
+        xp = xmlXPath(doc, '//table[contains(@class,""' + tbid + '"")]');
+    end
     
-        xp = xp(1).children(level);
-        //  pause
-        rows = xp.children.size;
-        cols = max([xp.children(rows/1).children.size,...
-                    xp.children(rows/2).children.size,...
-                    xp.children(rows/3).children.size,...
-                    xp.children(rows/4).children.size]);
+    // xp_cur = xp(1);
+    tb_no = xp.size;
+    disp(string(tb_no) + ' tables detected'); 
+    tb = list();
 
-        tb = '';
-        for cnt1 = 1:rows,
-            for cnt2 = 1:cols,
-                try
-                    tmpdata = xp.children(cnt1).children(cnt2).content;
-                    tmpdata2 = stripblanks(strcat(tmpdata));
-                catch
-                    tmpdata2 = '';
-                end
-                if ascii(tmpdata2) == 13 then 
-                    tmpdata2 = '';
-                end,
-                tb(cnt1, cnt2) = tmpdata2;
+    for tb_cnt = 1:tb_no
 
-            end,
-        end,
+        try
+            xp_cur = xp(tb_cnt);
+            if with_header == %t then
+                tb(tb_cnt) = %xmlScanTable_withheader(xp_cur);
+            else
+                tb(tb_cnt) = %xmlScanTable_noheader(xp_cur);
+            end
+        catch
+            disp("Error processing table " + string(tb_cnt));
+        end
 
     end
+
 
 
 endfunction
