@@ -1,4 +1,4 @@
-// Copyright (C) 2015 - Trity Technogies
+// Copyright (C) 2020 - ByteCode Malaysia
 
 // This file is released under the 3-clause BSD license. See COPYING-BSD.
 
@@ -7,7 +7,7 @@ function bytecode_iot_modulelib = startModule()
     TOOLBOX_NAME  = "bytecode_iot_module";
     TOOLBOX_TITLE = "Bytecode IOT Module";
 
-  mprintf("Start " + TOOLBOX_TITLE +  " 1.0\n");
+  mprintf("Start " + TOOLBOX_TITLE +  " 1.1\n");
 
   if isdef("bytecode_iot_modulelib") then
     warning("bytecode_iot_modulelib already loaded");
@@ -65,14 +65,14 @@ javaclasspath(path_thirdparty + '/okio-1.13.0.jar')
 // =============================================================================
 //  if or(getscilabmode() == ["NW";"STD"]) then
 //    mprintf("\tLoad demos\n");
-//    pathdemos = pathconvert(root_tlbx+"/demos/trity_iot_module.dem.gateway.sce", %F, %T);
+//    pathdemos = pathconvert(root_tlbx+"/demos/bytecode_iot_module.dem.gateway.sce", %F, %T);
 //    add_demo(TOOLBOX_TITLE, pathdemos);
 //  end
 
 // Load Preferences GUI
 // =============================================================================
 //  if getscilabmode() == "STD" then
-//    addModulePreferences(TOOLBOX_TITLE, root_tlbx, etc_tlbx + "trity_iot_module_preferences.xml");
+//    addModulePreferences(TOOLBOX_TITLE, root_tlbx, etc_tlbx + "bytecode_iot_module_preferences.xml");
 //  end
 
 
