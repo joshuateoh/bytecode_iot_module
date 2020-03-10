@@ -8,7 +8,7 @@ It makes use of both Scilab built-in functions and external Java libraries.
 
 ### Prerequisites
 
-1. Scilab 6.0.x or Scilab 6.1.x
+1. Scilab 6.1.x
 
 ### Installing
 
@@ -46,6 +46,10 @@ bytecode_iot_module_Path is where this file is.
 
 ## Revisions
 
+### REVISION NOTES 2.0
+LIBRARY REMOVAL
+* Functions no longer rely on external Java libraries.
+
 ### REVISION NOTES 1.1
 BUGS FIXED
 * Bugs fixed and new xml features 
@@ -56,7 +60,7 @@ NEW FEATURES
 
 ## Version
 
-This is the Revision 1.1 of Scilab IoT Module for Scilab 6.0.x
+This is the Revision 2.0 of Scilab IoT Module for Scilab 6.1.x
 
 ## Authors
 Joshua Teoh and Tan Chin Luh (ByteCode Malaysia)
