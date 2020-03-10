@@ -7,7 +7,7 @@ function bytecode_iot_modulelib = startModule()
     TOOLBOX_NAME  = "bytecode_iot_module";
     TOOLBOX_TITLE = "Bytecode IOT Module";
 
-  mprintf("Start " + TOOLBOX_TITLE +  " 1.0\n");
+  mprintf("Start " + TOOLBOX_TITLE +  " 2.0\n");
 
   if isdef("bytecode_iot_modulelib") then
     warning("bytecode_iot_modulelib already loaded");
