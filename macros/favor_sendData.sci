@@ -33,28 +33,11 @@ function result = favor_sendData(api,data)
 //     Joshua, C.L. Tan, Bytecode    
 //
 
-    jimport okhttp3.MediaType 
-    jimport okhttp3.Request$Builder
-    jimport okhttp3.OkHttpClient
-    jimport okhttp3.RequestBody
-
-    // Creating Data 
-    JSON = MediaType.parse("application/json; charset=utf-8"); // Setting the media type to JSON
-    thedata = favor_struct2json(data);
-    req_body = RequestBody.create(JSON,thedata) // We used the 2 above to create the data body
-
-    reqbuilder = jnewInstance(Request$Builder)
-    reqbuilder.url("https://api.favoriot.com/v1/streams")
-    reqbuilder.addHeader("content-type", "application/json")
-    reqbuilder.addHeader("cache-control", "no-cache")
-    reqbuilder.addHeader("apikey", api)
-    reqbuilder.post(req_body) // Put the request body here
-
-    request = jinvoke(reqbuilder,"build"); // Build the Request object
-
-    client = jnewInstance(OkHttpClient)
-    req_call = client.newCall(request)
-    result = jinvoke(req_call,"execute"); // Send the HTTP request
+    url_str = "https://apiv2.favoriot.com/v2/streams"
+    
+    curl_str = curlStr(url_str,"POST","header","Content-Type: application/json","header","apikey:"+api,"data",data) + " -k"
+    
+    [result,stat]=unix_g(curl_str)
 
 endfunction
 

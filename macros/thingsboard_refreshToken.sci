@@ -24,32 +24,13 @@ function newtoken = thingsboard_refreshToken(url,oldtoken)
 //     Joshua T., Bytecode
 //    
     
-    jimport okhttp3.MediaType 
-    jimport okhttp3.Request$Builder
-    jimport okhttp3.OkHttpClient
-    jimport okhttp3.RequestBody
-    
-    JSON = MediaType.parse("application/json; charset=utf-8");
-    thedata = '{""refreshToken"":""'+oldtoken.refreshToken+'""}'
-    req_body = RequestBody.create(JSON,thedata)
-    
-    bear = "Bearer "+oldtoken.token
-    
-    reqbuilder = jnewInstance(Request$Builder)
     url_str = url+'/api/auth/token'
-    reqbuilder.url(url_str)
-    reqbuilder.addHeader('Content-Type', 'application/json')
-    reqbuilder.addHeader('Accept', 'application/json')
-    reqbuilder.addHeader('X-Authorization',bear)
-    reqbuilder.post(req_body)
     
-    request = jinvoke(reqbuilder,"build");
-    client = jnewInstance(OkHttpClient)
-    req_call = client.newCall(request)
-    result = jinvoke(req_call,"execute");
+    data = struct("refreshToken",oldtoken.refreshToken)
     
-    result_body = jinvoke(result, 'body');
-    body_str = jinvoke(result_body, 'string')
-    newtoken = JSONParse(body_str)
+    curl_str = curlStr(url_str,"POST","header","Content-Type: application/json","token",oldtoken.token,"data",data)
+    
+    [message,stat]=unix_g(curl_str);
+    newtoken = fromJSON(message); 
     
 endfunction

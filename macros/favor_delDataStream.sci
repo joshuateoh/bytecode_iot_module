@@ -33,20 +33,9 @@ function result = favor_delDataStream(api,id)
 //     Joshua T., C.L. Tan, Bytecode    
 //
 
+    url_str = "https://apiv2.favoriot.com/v2/streams/"+id;
+    
+    curl_str = curlStr(url_str,"DELETE","header","apikey:"+api) + " -k"
+    [result,stat]=unix_g(curl_str)
 
-    jimport okhttp3.OkHttpClient;
-    jimport okhttp3.Request$Builder
-
-    client = jnewInstance(OkHttpClient);
-    reqbuilder = jnewInstance(Request$Builder)
-
-    reqbuilder.url("https://api.favoriot.com/v1/streams/"+id)
-    reqbuilder.addHeader("content-type", "application/json")
-    reqbuilder.addHeader("cache-control", "no-cache")
-    reqbuilder.addHeader("apikey", api)
-    request = jinvoke(reqbuilder,"delete")
-    request = jinvoke(reqbuilder,"build") // Build the Request object
-
-    req_call = client.newCall(request)
-    result = jinvoke(req_call,"execute")  // Send the HTTP request
 endfunction

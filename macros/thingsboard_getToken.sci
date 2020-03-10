@@ -26,32 +26,15 @@ function token = thingsboard_getToken(url,user,pw)
 //     Joshua T., Bytecode 
 //    
     
-    jimport okhttp3.MediaType 
-    jimport okhttp3.Request$Builder
-    jimport okhttp3.OkHttpClient
-    jimport okhttp3.RequestBody
+    if part(url,$) == "/" then
+        url2 = part(url,1:$-1)
+    else
+        url2 = url
+    end
     
-    bool = jautoUnwrap();
-    jautoUnwrap(%t)
+    url_str = url2+'/api/auth/login'
     
-    JSON = MediaType.parse("application/json; charset=utf-8");
-    thedata = '{""username"":""'+user+'"", ""password"":""'+pw+'""}'
-    req_body = RequestBody.create(JSON,thedata)
+    data_st = struct("username", user, "password", pw)
+    [token, status] = http_post(url_str,data_st)
     
-    url_str = url+'/api/auth/login'
-    reqbuilder = jnewInstance(Request$Builder)
-    reqbuilder.url(url_str)
-    reqbuilder.addHeader('Content-Type', 'application/json')
-    reqbuilder.addHeader('Accept', 'application/json')
-    reqbuilder.post(req_body)
-    
-    request = jinvoke(reqbuilder,"build");
-    client = jnewInstance(OkHttpClient)
-    req_call = client.newCall(request)
-    result = jinvoke(req_call,"execute");
-    
-    result_body = jinvoke(result, 'body');
-    body_str = jinvoke(result_body, 'string')
-    token = JSONParse(body_str)
-    jautoUnwrap(bool)
 endfunction

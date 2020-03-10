@@ -1,15 +1,14 @@
-function fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr,varargin)
+function fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiReadKey,fieldnbr,varargin)
 // Find (GET) values from a field in a ThingSpeak channel
 //
 // Syntax
-//     fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr)
-//     fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr,optionName,optionValues)
+//     fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiReadKey,fieldnbr)
+//     fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiReadKey,fieldnbr,optionName,optionValues)
 //
 // Parameters
 //     channelID : ID of the channel in ThingSpeak
 //     privacy : Specify whether the channel is 'public' or 'private'
-//     apiWriteKey : Write API Key of the channel
-//     apiReadKey : Read API Key of the channel
+//     apiReadKey : Read API Key of the channel (required for private channels)
 //     fieldnbr : The field number to retrieve the data from (1-8)
 //     optionName, optionValues : Additional options on how to retrieve the field values
 //                  
@@ -64,25 +63,25 @@ function fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiRea
 // Authors
 //     Joshua T., Bytecode
 
-    jimport com.angryelectron.thingspeak.Channel
-    jimport com.angryelectron.thingspeak.FeedParameters
-    jimport java.text.SimpleDateFormat
+    sym1 = "?";
+    acceptable_period = ['10','15','20','30','60','240','720','1440','daily']
+    
+    if fieldnbr > 8 then
+        error(msprintf("Wrong field number. (1-8) \n"));
+    end
 
     // Create the channel
+    url_base = "https://api.thingspeak.com/channels/"+string(channelID)+"/fields/"+string(fieldnbr)+".json"
     if convstr(privacy) == 'public' then
-        channel = jnewInstance(Channel,channelID, apiWriteKey)
+        sym1 = "?"
+        
     elseif convstr(privacy) == 'private' then
-        if apiReadKey == ''
-            channel = jnewInstance(Channel,channelID, apiWriteKey,apiWriteKey)
-        else
-             channel = jnewInstance(Channel,channelID, apiWriteKey,apiReadKey)
-        end
+        url_base = url_base+"?api_key="+apiReadKey
+        sym1 = "&"
     else
         error(msprintf("Wrong privacy input. ''public'' or ''private''\n"))
     end
     
-    options = jnewInstance(FeedParameters);
-    dateformatter = jnewInstance(SimpleDateFormat,"yyyy-MM-dd HH:mm:ss");
     addstatus = %f
     addlocation = %f
     
@@ -91,179 +90,130 @@ function fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiRea
     if floor(rhs/2)*2<>rhs then
         error(msprintf("Wrong number of optional input argument(s) : an even number is expected.\n"));
     end
-        
+    
+    opt_arg = ""
     // Go through the optional arguments
     if rhs >=2 then
         for i =1:2:rhs
-                select convstr(varargin(i))
-                case "results"
-                    options.results(varargin(i+1));
-                case "days"
-                    options.days(varargin(i+1));
-                case "min"
-                    options.min(varargin(i+1));
-                case "max"
-                    options.max(varargin(i+1));
-                case "sum"
-                    select varargin(i+1)
-                    case 10
-                        options.sum(FeedParameters$Period.T10m);
-                    case 15
-                        options.sum(FeedParameters$Period.T15m);
-                    case 20
-                        options.sum(FeedParameters$Period.T20m);
-                    case 30
-                        options.sum(FeedParameters$Period.T30m);
-                    case 60
-                        options.sum(FeedParameters$Period.T1h);
-                    case 240 // 4 hours
-                        options.sum(FeedParameters$Period.T4h);
-                    case 720 //12 hours
-                        options.sum(FeedParameters$Period.T12h);
-                    case 1440
-                        options.sum(FeedParameters$Period.T24h);
-                    else
-                        error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes.\n"))
-                    end
-                case "average"
-                    select varargin(i+1)
-                    case 10
-                        options.average(FeedParameters$Period.T10m);
-                    case 15
-                        options.average(FeedParameters$Period.T15m);
-                    case 20
-                        options.average(FeedParameters$Period.T20m);
-                    case 30
-                        options.average(FeedParameters$Period.T30m);
-                    case 60
-                        options.average(FeedParameters$Period.T1h);
-                    case 240 // 4 hours
-                        options.average(FeedParameters$Period.T4h);
-                    case 720 //12 hours
-                        options.average(FeedParameters$Period.T12h);
-                    case 1440
-                        options.average(FeedParameters$Period.T24h);
-                    else
-                        error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes.\n"))
-                    end
-                case "median"
-                    select varargin(i+1)
-                    case 10
-                        options.median(FeedParameters$Period.T10m);
-                    case 15
-                        options.median(FeedParameters$Period.T15m);
-                    case 20
-                        options.median(FeedParameters$Period.T20m);
-                    case 30
-                        options.median(FeedParameters$Period.T30m);
-                    case 60
-                        options.median(FeedParameters$Period.T1h);
-                    case 240 // 4 hours
-                        options.median(FeedParameters$Period.T4h);
-                    case 720 //12 hours
-                        options.median(FeedParameters$Period.T12h);
-                    case 1440
-                        options.median(FeedParameters$Period.T24h);
-                    else
-                        error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes.\n"))
-                    end
-                case "timescale"
-                    select varargin(i+1)
-                    case 10
-                        options.timescale(FeedParameters$Period.T10m);
-                    case 15
-                        options.timescale(FeedParameters$Period.T15m);
-                    case 20
-                        options.timescale(FeedParameters$Period.T20m);
-                    case 30
-                        options.timescale(FeedParameters$Period.T30m);
-                    case 60
-                        options.timescale(FeedParameters$Period.T1h);
-                    case 240 // 4 hours
-                        options.timescale(FeedParameters$Period.T4h);
-                    case 720 //12 hours
-                        options.timescale(FeedParameters$Period.T12h);
-                    case 1440 // 24 hours
-                        options.timescale(FeedParameters$Period.T24h);
-                    else
-                        error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes.\n"))
-                    end
-                case "startdate"
-                    startdate = dateformatter.parse(varargin(i+1));
-                    options.start(startdate);
-                case "enddate"
-                    enddate = dateformatter.parse(varargin(i+1));
-                    options.end(enddate);
-                case "offset"
-                    options.offset(varargin(i+1));
-                case "status"
-                    if or(type(varargin(i+1))==[4,6])
-                        options.status(varargin(i+1));
-                        addstatus = varargin(i+1)
-                    else
-                        error(msprintf("Status input must be boolean.\n"))
-                    end
-                case "location"
-                    if or(type(varargin(i+1))==[4,6])
-                        options.location(varargin(i+1));
-                        addlocation = varargin(i+1);
-                    else
-                        error(msprintf("Location input must be boolean.\n"))
+            
+            if i ~= 1 then
+                sym1 = "&"
+            end
+            
+            select convstr(varargin(i))
+            case "results"
+                opt_arg = opt_arg + sym1 + "results="+string(varargin(i+1)) 
+            case "days"
+                opt_arg = opt_arg + sym1 + "days="+string(varargin(i+1))    
+            case "min"
+                opt_arg = opt_arg + sym1 + "min="+string(varargin(i+1)) 
+            case "max"
+                opt_arg = opt_arg + sym1 + "max="+string(varargin(i+1))
+            case "sum"
+                chk = grep(acceptable_period,string(varargin(i+1)))
+                if chk == []
+                    error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes or ""daily"".\n"))
+                else
+                     opt_arg = opt_arg + sym1 + "sum="+string(varargin(i+1))
+                end
+            case "average"
+                chk = grep(acceptable_period,string(varargin(i+1)))
+                if chk == []
+                    error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes or ""daily"".\n"))
+                else
+                     opt_arg = opt_arg + sym1 + "average="+string(varargin(i+1))
+                end
+            case "median"
+                chk = grep(acceptable_period,string(varargin(i+1)))
+                if chk == []
+                    error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes or ""daily"".\n"))
+                else
+                     opt_arg = opt_arg + sym1 + "median="+string(varargin(i+1))
+                end
+            case "timescale"
+                chk = grep(acceptable_period,string(varargin(i+1)))
+                if chk == []
+                    error(msprintf("Wrong time range. \nPermitted time range is 10,15,20,30,60,240,720,1440 minutes or ""daily"".\n"))
+                else
+                     opt_arg = opt_arg + sym1 + "timescale="+string(varargin(i+1))
+                end
+            case "startdate"
+                datestr = varargin(i+1);
+                datestr = strsubst(datestr," ","%20")
+                opt_arg = opt_arg + sym1 + "start="+datestr
+            case "enddate"
+                datestr = varargin(i+1);
+                datestr = strsubst(datestr," ","%20")
+                opt_arg = opt_arg + sym1 + "end="+datestr
+            case "offset"
+                opt_arg = opt_arg + sym1 + "offset="+string(varargin(i+1))
+            case "status"
+                if or(type(varargin(i+1))==[4,6])
+                    addstatus = varargin(i+1)
+                    if addstatus == %t
+                        opt_arg = opt_arg + sym1 + "status=true"
                     end
                 else
-                    error(msprintf("Wrong options.\n"))
+                    error(msprintf("Status input must be boolean.\n"))
                 end
+            case "location"
+                if or(type(varargin(i+1))==[4,6])
+                    addlocation = varargin(i+1);
+                    if addlocation == %t
+                        opt_arg = opt_arg + sym1 + "location=true"
+                    end
+                else
+                    error(msprintf("Location input must be boolean.\n"))
+                end
+            else
+                error(msprintf("Wrong options.\n"))
+            end
         end        
     end
     
-    // Obtain the channel feed using the options given
-    channelfeed = jinvoke(channel,'getChannelFeed',options)
-    // Grab the feed's entries
-    entrylist = jinvoke(channelfeed,'getEntryList');
+    url_str = url_base + opt_arg
+    [result, status] = http_get(url_str)
     
-    if fieldnbr > 8 then
-        error(msprintf("Wrong field number. (1-8) \n"));
-    end
+    feed = result.feeds;
+    field = "field"+string(fieldnbr)
     
-    if jinvoke(entrylist,'size') == 0 then
-        // No entries found. 
-        fieldvalues=[]
-    else // Go thru each entry
-        for i = 1:jinvoke(entrylist,'size')
-            entry_itr = entrylist(i)
-            values(i) = jinvoke(entry_itr,'getField',fieldnbr)
-            time(i) = jinvoke(jinvoke(entry_itr,'getCreated'),'toString')
-            if addstatus == %t
-                cur_stat = jinvoke(entry_itr,'getStatus')
-                if cur_stat == []
-                    status(i) = ""
-                else
-                    status(i) = cur_stat;
-                end
-            end
-            if addlocation == %t
-                cur_lat = jinvoke(entry_itr,'getLatitude')
-                cur_long = jinvoke(entry_itr,'getLongitude')
-                cur_elev = jinvoke(entry_itr,'getElevation')
-                latitude(i) = cur_lat
-                longitude(i) = cur_long
-                elevation(i) = cur_elev
-            end
+    if isfield(feed,field) then
+        
+        select field
+        case "field1"
+            values = list2vec(feed.field1)
+        case "field2"
+            values = list2vec(feed.field2)
+        case "field3"
+            values = list2vec(feed.field3)
+        case "field4"
+            values = list2vec(feed.field4)
+        case "field5"
+            values = list2vec(feed.field5)
+        case "field6"
+            values = list2vec(feed.field6)
+        case "field7"
+            values = list2vec(feed.field7)
+        case "field8"
+            values = list2vec(feed.field8)
         end
         
+        time = list2vec(feed.created_at) 
+        fieldvalues=struct("values",values,"time",time)
+        
         if addstatus == %t
-            if addlocation == %t
-                fieldvalues=struct("values",values,"time",time,"status",status,"latitude",latitude,"longitude",longitude,"elevation",elevation)
-            else
-                fieldvalues=struct("values",values,"time",time,"status",status)
-            end
-        else
-            if addlocation == %t
-                fieldvalues=struct("values",values,"time",time,"latitude",latitude,"longitude",longitude,"elevation",elevation)
-            else
-                fieldvalues=struct("values",values,"time",time)
-            end
+            fieldvalues.status = list2vec(feed.status)
         end
+        
+        if addlocation == %t
+            fieldvalues.latitude = list2vec(feed.latitude)
+            fieldvalues.longitude = list2vec(feed.longitude)
+            fieldvalues.elevation = list2vec(feed.elevation)
+        end
+        
+    else
+        fieldvalues=[]
     end
+    
     
 endfunction

@@ -41,8 +41,8 @@
             <listitem><para> Device post token</para></listitem>
         </varlistentry>
         <varlistentry>
-            <term>jsonbody :</term>
-            <listitem><para> A data string in JSON Format</para></listitem>
+            <term>data :</term>
+            <listitem><para> A data struct containing the keys and values</para></listitem>
         </varlistentry>
         <varlistentry>
             <term>n :</term>
@@ -54,7 +54,7 @@
 <refsection>
    <title>Description</title>
    <para>
-Push data to a device in ThingsBoard. The device post token is different from the token used in retrieving data. The data needs to be in the form of JSON format which can be created using create_JSON.
+Push data to a device in ThingsBoard. The device post token is different from the token used in retrieving data.
    </para>
    <para>
 </para>
@@ -63,11 +63,10 @@ Push data to a device in ThingsBoard. The device post token is different from th
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
-// If you want to push data to a device with id ABC123
-data = create_JSON("temp",24,"humidity",55)
-token = thingsboard_getToken(url,user,pw)
-[devicetoken,code] = thingsboard_getDeviceToken(url,token,"ABC123")
-n = thingsboard_postData(url,devicetoken,data)
+// If your Thingsboard device has an access token of ABC123
+acc_token = "ABC123"
+data = struct("temp",24,"humidity",55)
+n = thingsboard_postData(url,acc_token,data)
 
    ]]></programlisting>
 </refsection>
@@ -75,7 +74,6 @@ n = thingsboard_postData(url,devicetoken,data)
 <refsection role="see also">
    <title>See also</title>
    <simplelist type="inline">
-   <member><link linkend="create_JSON">create_JSON</link></member>
    <member><link linkend="thingsboard_getDeviceToken">thingsboard_getDeviceToken</link></member>
    </simplelist>
 </refsection>

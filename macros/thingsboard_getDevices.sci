@@ -33,8 +33,6 @@ function [devices, code] = thingsboard_getDevices(url,token,namefilter,ndev)
     
     jimport java.util.Base64
     jimport java.lang.String
-    jimport okhttp3.Request$Builder
-    jimport okhttp3.OkHttpClient
     
     rhs = argn(2);
     
@@ -57,41 +55,23 @@ function [devices, code] = thingsboard_getDevices(url,token,namefilter,ndev)
         url_str = url+'/api/customer/'+custID+'/devices?limit='+string(n)
     end
         
-    reqbuilder = jnewInstance(Request$Builder)
-    reqbuilder.url(url_str)
-    reqbuilder.addHeader('content-type', 'application/json')
-    bear = "Bearer "+token.token
-    reqbuilder.addHeader('X-Authorization',bear)
+    curl_str = curlStr(url_str,"GET","header","Content-Type: application/json","token",token)
     
-    request = jinvoke(reqbuilder, 'build');
-    client = jnewInstance(OkHttpClient)
-    req_call = client.newCall(request)
-    result = jinvoke(req_call, 'execute')
+    [message,stat]=unix_g(curl_str);
+    message_st = fromJSON(message); 
     
-    result_code = jinvoke(result,'code')
-    result_body = jinvoke(result, 'body')
-    body_str = jinvoke(result_body, 'string');
     
-    code = result_code
-    if result_code == 200 then
-        temp = JSONParse(body_str);
-        data = temp.data
-        if data == [] then
-            devices = "No device found"
-        else 
-            temp1 = list2vec(data.name)
-            temp2 = list2vec(list2vec(data.id).id)
-            devices = [temp1 temp2]
+    if isfield(message_st,"data") then
+        if message_st.data ~= [] then
+            devices = list2vec(message_st.data.name)
+            code = 200
+        else
+            devices = []
+            code = 200
         end
-    elseif result_code == 401 then
-        devices = body_str;
-    elseif result_code == 403 then
-        devices = body_str;
-    elseif result_code == 404 then
-        devices = body_str;
     else
-        devices = body_str;
+        devices = message_st.message
+        code = message_st.status
     end
-    
     
 endfunction

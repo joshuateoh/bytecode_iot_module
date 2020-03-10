@@ -33,25 +33,13 @@ function data = favor_getDeviceData(api,id)
 //     Joshua T., C.L. Tan, Bytecode    
 //
 
-    jimport('okhttp3.OkHttpClient');
-    jimport('okhttp3.Request$Builder')
- 
-    reqbuilder = jnewInstance(Request$Builder)
-    reqbuilder.url("https://api.favoriot.com/v1/streams?device_developer_id=" + id);
-    reqbuilder.addHeader('content-type', 'application/json')
-    reqbuilder.addHeader('cache-control', 'no-cache')
-    reqbuilder.addHeader('apikey', api)
- 
-    request = jinvoke(reqbuilder, 'build');
- 
-    client = jnewInstance(OkHttpClient)
-    req_call = client.newCall(request)
-    result = jinvoke(req_call, 'execute');// This will retrieve all data
- 
-    result_response = jinvoke(result, 'body');
-    response_body = jinvoke(result_response, 'string');// response body can only be consumed once
-    data = JSONParse(response_body)
-
+    url_str = "https://apiv2.favoriot.com/v2/streams?device_developer_id="+id
+    
+    curl_str = curlStr(url_str,"GET","header","apikey:"+api) + " -k"
+    
+    [message,stat]=unix_g(curl_str);
+    data = fromJSON(message);
+    
 endfunction
 
 

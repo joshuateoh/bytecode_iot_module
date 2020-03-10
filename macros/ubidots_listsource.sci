@@ -27,7 +27,7 @@ function [num_ds,ds_name, ds_id,num_var,out] = ubidots_listsource(tokenID)
     baseurl = "http://things.ubidots.com/api/v1.6/";
     listsource = baseurl + 'datasources?token=' + tokenID;
     [a2,b2] = getURL(listsource);
-    out=JSONParse(b2);
+    out=fromJSON(b2);
     num_ds = out.count;
     ds_name = list2vec(out.results.name);
     ds_id = list2vec(out.results.id);

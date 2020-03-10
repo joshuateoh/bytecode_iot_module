@@ -24,8 +24,8 @@
 <refsynopsisdiv>
    <title>Syntax</title>
    <synopsis>
-   fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr)
-   fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiWriteKey,apiReadKey,fieldnbr,optionName,optionValues)
+   fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiReadKey,fieldnbr)
+   fieldvalues=thingspeak_fieldvalues(channelID,privacy,apiReadKey,fieldnbr,optionName,optionValues)
    
    </synopsis>
 </refsynopsisdiv>
@@ -42,12 +42,8 @@
             <listitem><para> Specify whether the channel is 'public' or 'private'</para></listitem>
         </varlistentry>
         <varlistentry>
-            <term>apiWriteKey :</term>
-            <listitem><para> Write API Key of the channel</para></listitem>
-        </varlistentry>
-        <varlistentry>
             <term>apiReadKey :</term>
-            <listitem><para> Read API Key of the channel</para></listitem>
+            <listitem><para> Read API Key of the channel (required for private channels)</para></listitem>
         </varlistentry>
         <varlistentry>
             <term>fieldnbr :</term>
