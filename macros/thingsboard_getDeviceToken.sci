@@ -28,38 +28,19 @@ function [devicetoken,code] = thingsboard_getDeviceToken(url,token,deviceID)
 //     Joshua T., Bytecode 
 //    
     
-    jimport okhttp3.Request$Builder
-    jimport okhttp3.OkHttpClient
-    
     url_str = url+'/api/device/'+deviceID+'/credentials'
     
-    reqbuilder = jnewInstance(Request$Builder)
-    reqbuilder.url(url_str)
-    reqbuilder.addHeader('content-type', 'application/json')
-    bear = "Bearer "+token.token
-    reqbuilder.addHeader('X-Authorization',bear)
+    curl_str = curlStr(url_str,"GET","header","Content-Type: application/json","token",token)
     
-    request = jinvoke(reqbuilder, 'build');
-    client = jnewInstance(OkHttpClient)
-    req_call = client.newCall(request)
-    result = jinvoke(req_call, 'execute')
-    
-    result_code = jinvoke(result,'code')
-    result_body = jinvoke(result, 'body')
-    body_str = jinvoke(result_body, 'string');
-    
-    code = result_code
-    if result_code == 200 then
-        temp = JSONParse(body_str);
-        devicetoken = temp.credentialsId
-    elseif result_code == 401 then
-        devicetoken = body_str;
-    elseif result_code == 403 then
-        devicetoken = body_str;
-    elseif result_code == 404 then
-        devicetoken = body_str;
+   [message,stat]=unix_g(curl_str);
+    message_st = fromJSON(message); 
+
+    if isfield(message_st,"credentialsId")
+        devicetoken = message_st.credentialsId
+        code = 200
     else
-        devicetoken = body_str;
+        devicetoken = message_st.message
+        code = message_st.status
     end
     
 endfunction

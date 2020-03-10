@@ -48,7 +48,7 @@ function obj = favor_createData(id,varargin)
         str2 = strcat(''''+list2vec(varargin) + ''',''0'',');
         str2 = part(str2,1:$-1);
         str = 'struct(' + str2 + ')';
-        data = eval(str);
+        data = evstr(str);
         obj.data = data;
     end   
 

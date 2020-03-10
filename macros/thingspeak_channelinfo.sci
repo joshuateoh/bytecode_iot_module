@@ -1,4 +1,4 @@
-function channel_info= thingspeak_channelinfo(channelID,privacy,apiWriteKey,apiReadKey)
+function channel_info= thingspeak_channelinfo(channelID,userapi)
 // Get Thingspeak Channel Information
 //
 // Syntax
@@ -6,16 +6,14 @@ function channel_info= thingspeak_channelinfo(channelID,privacy,apiWriteKey,apiR
 //
 // Parameters
 //     channelID : channel ID in ThingSpeak
-//     privacy : Specify whether the channel is 'public' or 'private'
-//     apiWriteKey : Write API Key of the channel
-//     apiReadKey : Read API Key of the channel. 
+//     userapi : User account api (required for private channels)
 //     channel_info : Channel information
 //
 // Description
 //    This is to display the information of the channel in the thingspeak cloud.
 //    
 // Examples
-//    channel_info= thingspeak_channelinfo(channelID,"private","writekey","readkey")
+//    channel_info= thingspeak_channelinfo(channelID,"userapi")
 // 
 // See also
 //     thingspeak_fieldvalues
@@ -26,31 +24,15 @@ function channel_info= thingspeak_channelinfo(channelID,privacy,apiWriteKey,apiR
 // Authors
 //     Joshua T., Bytecode
 
-    jimport com.angryelectron.thingspeak.Channel
+    rhs = argn(2)
 
-    // Create the channel object
-    if convstr(privacy) == 'public' then
-        channel = jnewInstance(Channel,channelID, apiWriteKey)
-    elseif convstr(privacy) == 'private' then
-        if apiReadKey == ''
-            channel = jnewInstance(Channel,channelID, apiWriteKey,apiWriteKey)
-        else
-             channel = jnewInstance(Channel,channelID, apiWriteKey,apiReadKey)
-        end
+    if rhs == 1 then
+        url_str = "http://api.thingspeak.com/channels/"+string(channelID)+".json"
+    else        
+        url_str = "http://api.thingspeak.com/channels/"+string(channelID)+".json?api_key="+userapi
     end
-    // Obtain the channel feed and extract information from it
-    channelfeed = jinvoke(channel,'getChannelFeed')
-    channelid = jinvoke(channelfeed,'getChannelId');
-    channeldate = jinvoke(channelfeed,'getChannelCreationDate');
-    channeldatestr = jinvoke(channeldate,'toString');
-    lastupdate = jinvoke(channelfeed,'getChannelUpdateDate');
-    lastupdatestr = jinvoke(lastupdate,'toString');
+
     
-    // Place the information inside a structure
-    channel_info = struct("channelname",jinvoke(channelfeed,'getChannelName'), ..
-                "description",jinvoke(channelfeed,'getChannelDescription'), ..
-                "id",double(channelid), ..
-                "creationdate",channeldatestr, ..
-                "lastupdate",lastupdatestr )                    
+    [channel_info, status] = http_get(url_str)
     
 endfunction

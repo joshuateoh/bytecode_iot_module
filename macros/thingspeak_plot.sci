@@ -39,7 +39,7 @@ function thingspeak_plot(xtime,ydata,linespec)
     yreal = evstr(ydata1)
     
     // Convert to datenum values
-    oldformat = SimpleDateFormat.new("EEE MMM dd HH:mm:ss z yyyy")
+    oldformat = SimpleDateFormat.new("yyyy-MM-dd''T''HH:mm:ss''Z''")
     newformat = SimpleDateFormat.new("yyyy.MM.dd.HH.mm.ss")
     xr = size(xtime1,1)
     for i = 1:xr

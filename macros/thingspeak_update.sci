@@ -1,15 +1,12 @@
-function entryID=thingspeak_update(channelID,privacy,datastruct,apiWriteKey,apiReadKey)
+function entryID=thingspeak_update(apiWriteKey,datastruct)
 // Update a Thingspeak Channel
 //
 // Syntax
-//     entryID=thingspeak_update(channelID,privacy,datastruct,apiWriteKey,apiReadKey)
+//     entryID=thingspeak_update(apiWriteKey,datastruct)
 //
 // Parameters
-//     channelID : ID of the channel in ThingSpeak
-//     privacy : Specify whether the channel is 'public' or 'private'
+//     apiWriteKey : Write API Key of the channel.
 //     datastruct : The data structure created using thingspeak_newentry
-//     apiWriteKey : Write API Key of the channel. The Write Key can be used as the Read API Key as well.
-//     apiReadKey : Read API Key of the channel. 
 //     entryID : The entry ID
 //
 // Description
@@ -17,8 +14,7 @@ function entryID=thingspeak_update(channelID,privacy,datastruct,apiWriteKey,apiR
 //    
 // Examples
 //    new_entry = thingspeak_newentry("status","New update!","field1",20)
-//    entry_update = thingspeak_update(channelID,'private',new_entry,"writekey","")
-//    get_entry = thingspeak_fieldvalues(channelID,'private',"","readkey",1,"results",1,"status",%t)
+//    entry_update = thingspeak_update("writekey",new_entry)
 // 
 // See also
 //     thingspeak_channelinfo
@@ -29,34 +25,48 @@ function entryID=thingspeak_update(channelID,privacy,datastruct,apiWriteKey,apiR
 // Authors
 //     Joshua T., Bytecode
 
-    jimport com.angryelectron.thingspeak.Channel
-    jimport com.angryelectron.thingspeak.Entry
-
-    // Create a channel
-    if convstr(privacy) == 'public' then
-        channel = jnewInstance(Channel,channelID, apiWriteKey)
-    elseif convstr(privacy) == 'private' then
-        if apiReadKey == ''
-            channel = jnewInstance(Channel,channelID, apiWriteKey,apiWriteKey)
-        else
-             channel = jnewInstance(Channel,channelID, apiWriteKey,apiReadKey)
-        end
+    url_base = "https://api.thingspeak.com/update.json?api_key="+apiWriteKey
+    
+    update = "";
+    if datastruct.field1 ~= [] then
+        update = update + "&field1=" + string(datastruct.field1)
     end
-    // Create an Entry object and set the values
-    entry = jnewInstance(Entry)
-    entry.setField(1,string(datastruct.field1))
-    entry.setField(2,string(datastruct.field2))
-    entry.setField(3,string(datastruct.field3))
-    entry.setField(4,string(datastruct.field4))
-    entry.setField(5,string(datastruct.field5))
-    entry.setField(6,string(datastruct.field6))
-    entry.setField(7,string(datastruct.field7))
-    entry.setField(8,string(datastruct.field8))
-    entry.setLong(datastruct.longitude)
-    entry.setLatitude(datastruct.latitude)
-    entry.setElevation(datastruct.elevation)
-    entry.setStatus(string(datastruct.status))
-    // Update the channel
-    entryID = channel.update(entry)
+    if datastruct.field2 ~= [] then
+        update = update + "&field2=" + string(datastruct.field2)
+    end
+    if datastruct.field3 ~= [] then
+        update = update + "&field3=" + string(datastruct.field3)
+    end
+    if datastruct.field4 ~= [] then
+        update = update + "&field4=" + string(datastruct.field4)
+    end
+    if datastruct.field5 ~= [] then
+        update = update + "&field5=" + string(datastruct.field5)
+    end
+    if datastruct.field6 ~= [] then
+        update = update + "&field6=" + string(datastruct.field6)
+    end
+    if datastruct.field7 ~= [] then
+        update = update + "&field7=" + string(datastruct.field7)
+    end
+    if datastruct.field8 ~= [] then
+        update = update + "&field8=" + string(datastruct.field8)
+    end
+    if datastruct.longitude ~= [] then
+        update = update + "&long=" + string(datastruct.longitude)
+    end
+    if datastruct.latitude ~= [] then
+        update = update + "&lat=" + string(datastruct.latitude)
+    end
+    if datastruct.elevation ~= [] then
+        update = update + "&elevation=" + string(datastruct.elevation)
+    end
+    if datastruct.status ~= [] then
+        update = update + "&status=" + string(datastruct.status)
+    end
+    
+    url_str = url_base + update
+    [result, status] = http_get(url_str)
+    entryID = result.entry_id
     
 endfunction

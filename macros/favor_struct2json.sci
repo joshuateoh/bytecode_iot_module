@@ -35,21 +35,21 @@ function data = favor_struct2json(st)
     // JSON syntax chars
     ob = "{";
     cb = "}"; 
-    qm = """";
+    qm = "\""";
     cl = ":"; 
     cm = ","; 
     
-    str_start = "{ ""device_developer_id"": """ + st.device_developer_id + """, ""data"": {";
+    str_start = "{ \""device_developer_id\"": \""" + st.device_developer_id + "\"", \""data\"": {";
     str_end = "}}";
 
     fn = fieldnames(st.data);
     str_data = '';
     for cnt = 1:size(fn,1)
-        if type(eval("st.data."+fn(cnt))) == 1
-            str_data = str_data + qm + fn(cnt) + qm + cl + qm + string(eval("st.data."+fn(cnt)))+ qm + cm;
+        if type(evstr("st.data."+fn(cnt))) == 1
+            str_data = str_data + qm + fn(cnt) + qm + cl + qm + string(evstr("st.data."+fn(cnt)))+ qm + cm;
         else
             
-            str_data = str_data + qm + fn(cnt) + qm + cl + qm + eval("st.data."+fn(cnt))+ qm + cm;
+            str_data = str_data + qm + fn(cnt) + qm + cl + qm + evstr("st.data."+fn(cnt))+ qm + cm;
         end
     end
     

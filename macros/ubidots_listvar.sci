@@ -28,7 +28,7 @@ function [num_var,var_name,var_id,out] = ubidots_listvar(tokenID, dsID)
     listvar = baseurl + 'datasources/' + dsID + '/variables?token=' + tokenID;
     //listvar="http://things.ubidots.com/api/v1.6/datasources/5701e054762542415b9d2eff/variables?token=unDZ22XSXmJeCz1HU8pHy5aoRYKjEq";
     [a3,b3]=getURL(listvar);
-    out=JSONParse(b3);
+    out=fromJSON(b3);
     num_var = out.count;
     var_name = list2vec(out.results.name);
     var_id = list2vec(out.results.id);

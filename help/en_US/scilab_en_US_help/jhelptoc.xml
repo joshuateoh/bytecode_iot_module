@@ -2,13 +2,14 @@
 <!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
 <toc version="1.0">
 <tocitem target="index" text="bytecode_iot_module">
-<tocitem target="section_8b54c44353989cdf127849c9bb5a5419" text="bytecode_iot_module">
+<tocitem target="section_9c3e1053082ce0c7fad9e3aa44c11dda" text="bytecode_iot_module">
 <tocitem target="bg_display" text="bg_display"/>
 <tocitem target="bg_run" text="bg_run"/>
 <tocitem target="bg_terminate" text="bg_terminate"/>
 <tocitem target="convertdate" text="convertdate"/>
 <tocitem target="corr_matrix" text="corr_matrix"/>
 <tocitem target="create_JSON" text="create_JSON"/>
+<tocitem target="curlStr" text="curlStr"/>
 <tocitem target="favor_createData" text="favor_createData"/>
 <tocitem target="favor_createSensors" text="favor_createSensors"/>
 <tocitem target="favor_delDataStream" text="favor_delDataStream"/>
@@ -28,6 +29,9 @@
 <tocitem target="filterFILE" text="filterFILE"/>
 <tocitem target="getFILE" text="getFILE"/>
 <tocitem target="iot_display" text="iot_display"/>
+<tocitem target="iot_get" text="iot_get"/>
+<tocitem target="iot_init" text="iot_init"/>
+<tocitem target="iot_send" text="iot_send"/>
 <tocitem target="postURL" text="postURL"/>
 <tocitem target="sci2ts" text="sci2ts"/>
 <tocitem target="smooth2" text="smooth2"/>

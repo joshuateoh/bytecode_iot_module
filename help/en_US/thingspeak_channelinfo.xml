@@ -37,16 +37,8 @@
             <listitem><para> channel ID in ThingSpeak</para></listitem>
         </varlistentry>
         <varlistentry>
-            <term>privacy :</term>
-            <listitem><para> Specify whether the channel is 'public' or 'private'</para></listitem>
-        </varlistentry>
-        <varlistentry>
-            <term>apiWriteKey :</term>
-            <listitem><para> Write API Key of the channel</para></listitem>
-        </varlistentry>
-        <varlistentry>
-            <term>apiReadKey :</term>
-            <listitem><para> Read API Key of the channel.</para></listitem>
+            <term>userapi :</term>
+            <listitem><para> User account api (required for private channels)</para></listitem>
         </varlistentry>
         <varlistentry>
             <term>channel_info :</term>
@@ -67,7 +59,7 @@ This is to display the information of the channel in the thingspeak cloud.
 <refsection>
    <title>Examples</title>
    <programlisting role="example"><![CDATA[
-channel_info= thingspeak_channelinfo(channelID,"private","writekey","readkey")
+channel_info= thingspeak_channelinfo(channelID,"userapi")
 
    ]]></programlisting>
 </refsection>
