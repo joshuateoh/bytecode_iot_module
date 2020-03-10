@@ -4,7 +4,7 @@ Title: Bytecode IOT Module
 
 Summary: Provides connectivity to several cloud platforms in Scilab
 
-Version: 1.1
+Version: 2.0
 
 Author: Joshua Teoh
         Tan Chin Luh 
@@ -20,7 +20,7 @@ WebSite: https://www.bytecode-asia.com
 
 License: CeCILL
 
-ScilabVersion: >= 6.0
+ScilabVersion: >= 6.1
 
 Depends: 
 
