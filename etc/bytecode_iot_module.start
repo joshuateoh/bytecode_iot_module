@@ -31,7 +31,7 @@ function bytecode_iot_modulelib = startModule()
   ilib_verbose(0);
 //  mprintf("\tLoad gateways\n");
 //  exec(pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
-  mprintf("\tLoad Java libraries\n");
+//  mprintf("\tLoad Java libraries\n");
 //  exec(pathconvert(root_tlbx+"/src/java/loader.sce",%f));
 //  ilib_verbose(verboseMode);
 

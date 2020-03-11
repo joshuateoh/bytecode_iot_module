@@ -50,7 +50,7 @@ function data = thingsboard_getData(url,token,deviceID,key,n,day_limit)
     url_str = url+"/api/plugins/telemetry/DEVICE/"+deviceID+"/values/timeseries?keys="+key+"&startTs="+string(ts_start)+"&endTs="+string(ts_end)+"&limit="+string(n)
     
     curl_str = curlStr(url_str,"GET","header","Content-Type: application/json","token",token)
-    
+    curl_str = curl_str + " -k"
     [message,stat]=unix_g(curl_str);
     data = fromJSON(message); 
     
