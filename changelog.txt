@@ -1,5 +1,8 @@
 changelog of the bytecode_iot_module
 
+Version 2.0 (10-Mar-2020)
+* Functions changed to no longer rely on external Java libraries.
+
 Version 1.1 (18-Feb-2020)
 * Bugs fixed and new xml features 
 
