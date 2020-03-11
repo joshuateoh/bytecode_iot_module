@@ -50,6 +50,7 @@ function data = iot_get(obj,varargin)
         ts_start = ts_end - days_ms
         url_get = obj.url_get+opts.key+"&startTs="+string(ts_start)+"&endTs="+string(ts_end)
         url_str = curlStr(url_get,"GET","header","Content-Type: application/json","token",obj.token)
+        url_str = url_str + " -k"
         [message,stat]=unix_g(url_str);
         data = fromJSON(message);
          

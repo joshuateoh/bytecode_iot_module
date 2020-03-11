@@ -7,7 +7,8 @@ function bytecode_iot_modulelib = startModule()
     TOOLBOX_NAME  = "bytecode_iot_module";
     TOOLBOX_TITLE = "Bytecode IOT Module";
 
-  mprintf("Start " + TOOLBOX_TITLE +  " 1.1\n");
+
+  mprintf("Start " + TOOLBOX_TITLE +  " 2.0\n");
 
   if isdef("bytecode_iot_modulelib") then
     warning("bytecode_iot_modulelib already loaded");
@@ -31,7 +32,7 @@ function bytecode_iot_modulelib = startModule()
   ilib_verbose(0);
 //  mprintf("\tLoad gateways\n");
 //  exec(pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
-  mprintf("\tLoad Java libraries\n");
+//  mprintf("\tLoad Java libraries\n");
 //  exec(pathconvert(root_tlbx+"/src/java/loader.sce",%f));
 //  ilib_verbose(verboseMode);
 
